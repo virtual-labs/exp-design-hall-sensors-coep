@@ -2,24 +2,48 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "An accelerometer has a seismic mass of 0.05kg and a spring constant of 3 * 10 <sup>3</sup> N/m. Maximum mass displacement is 0.02 m (before the mass hits the stop). Calculate natural frequency?",
+      "question": " How does a Hall Effect sensor respond to an increasing magnetic field?",
       "answers": {
-        "a": "345 rad/s",
-        "b": "245 rad/s",
-        "c": "445 rad/s",
-        "d": "300 rad/s"
+         "a": "Increases output voltage",
+        "b": "Decreases output voltage",
+        "c": " Remains constant",
+        "d": " Generates a sound signal"
       },
-  
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary application of a Hall Effect sensor in automotive systems?",
+      "answers": {
+        "a": "Temperature control",
+        "b": "RPM sensing",
+        "c": "Light detection",
+        "d": "Radio reception"
+      },
+     
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "An accelerometer has a seismic mass of 0.05kg and a spring constant of 3 * 10 <sup> 3 </sup> N/m. Maximum mass displacement is 0.02 m (before the mass hits the stop). Calculate maximum measurable acceleration.",
+      "question": "Which configuration is common for Hall Effect sensors used in speed detection applications?",
       "answers": {
-        "a": "120 m/sec <sup>2</sup>",
-        "b": "1000 m/sec <sup>2</sup>",
-        "c": "1200 m/sec <sup>2</sup>",
-        "d": "100 m/sec <sup>2</sup>"
+        "a": "Unipolar",
+        "b": "Bipolar",
+        "c": "Tripolar",
+        "d": "Quadrupolar"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What is the significance of the Hall Effect in a rotating wheel speed sensor?",
+      "answers": {
+        "a": "Measures tire pressure",
+        "b": "Detects wheel alignment",
+        "c": "Determines wheel speed",
+        "d": "Indicates fuel level"
       },
      
       "correctAnswer": "c",
@@ -27,43 +51,23 @@
     },
 	
 	{
-      "question": "An accelerometer has a seismic mass of 0.05kg and a spring constant of 4 * 10 <sup>3</sup> N/m. Maximum mass displacement is 0.03 m (before the mass hits the stop). Calculate natural frequency.",
+      "question": "What happens to the resistance of the Hall Effect sensor in the presence of a magnetic field?",
       "answers": {
-        "a": "283 rad/s",
-        "b": "290 rad/s",
-        "c": "380 rad/s",
-        "d": "388 rad/s"
+        "a": "Increases",
+        "b": "Decreases",
+        "c": "Remains constant",
+        "d": "Becomes magnetic"
       },
      
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },	
-
-	
-	{
-      "question": "An accelerometer has a seismic mass of 0.05 kg and a spring constant of 4 * 10 <sup> 3 </sup> N/m. Maximum mass displacement is 0.03 m (before the mass hits the stop). Calculate maximum measurable acceleration.",
-      "answers": {
-        "a": "240 m/sec <sup>2</sup>",
-        "b": "250 m/sec <sup>2</sup>",
-        "c": "2300 m/sec <sup>2</sup>",
-        "d": "2402 m/sec <sup>2</sup>"
-      },
-     
-      "correctAnswer": "d",
-      "difficulty": "beginner"
-    },
-
-	{
-      "question": "Accelerometer is the measurement of _____.",
-      "answers": {
-        "a": "Velocity/time",
-        "b": "Energy/time",
-        "c": "Angle/time",
-        "d": "Height/time"
-      },
-     
-      "correctAnswer": "a",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     }
+  
+  
+  
+  
+  
+  
+  
   ]
 }
