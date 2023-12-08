@@ -2,51 +2,51 @@
   "version": 2.0,
   "questions": [
     {
-      "question": " The linear resistance element flow meters principle is based on __________________ equation?",
+      "question": "  What is the Hall Effect primarily used to measure?",
       "answers": {
-         "a": "Hagen Poiseuille",
-        "b": "Faraday's Law",
-        "c": "Hall effect",
-        "d": "None of the above"
+         "a": "Temperature",
+        "b": "Magnetic fields",
+        "c": " Pressure",
+        "d": " Light intensity"
       },
       
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "What is the necessity of flow measurement?",
+      "question": "Which physical principle is the basis of the Hall Effect?",
       "answers": {
-        "a": "Drinking purpose",
-        "b": "Construction purpose",
-        "c": "Laboratory purpose",
-        "d": "All the above"
+        "a": "Piezoelectricity",
+        "b": "Electromagnetic induction",
+        "c": "Magnetoresistance",
+        "d": "Electron movement"
       },
      
       "correctAnswer": "d",
       "difficulty": "beginner"
     },
     {
-      "question": "The flow meters are classified based on ________________?",
+      "question": "What type of material is often used in Hall Effect sensors?",
       "answers": {
-        "a": "Rate of flow",
-        "b": "Weight",
-        "c": "Volume",
-        "d": "All the above"
+        "a": "Copper",
+        "b": "Aluminum",
+        "c": "Silicon",
+        "d": "Semiconductor"
       },
      
       "correctAnswer": "d",
       "difficulty": "beginner"
     },
 	{
-      "question": "Which one of the following meters is a type of mechanical flow meter?",
+      "question": "In which unit is the output of a Hall Effect sensor typically measured?",
       "answers": {
-        "a": "Hot wire",
-        "b": "Cup type",
-        "c": "Turbine",
-        "d": "None of the above"
+        "a": "Volts (V)",
+        "b": "Amperes (A)",
+        "c": "Teslas (T)",
+        "d": "Hertz (Hz)"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
 	
@@ -62,6 +62,12 @@
       "correctAnswer": "b",
       "difficulty": "beginner"
     }
+  
+  
+  
+  
+  
+  
   
   ]
 }
