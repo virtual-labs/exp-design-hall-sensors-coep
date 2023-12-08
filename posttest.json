@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " How does a Hall Effect sensor respond to an increasing magnetic field?",
+      "answers": {
+         "a": "Increases output voltage",
+        "b": "Decreases output voltage",
+        "c": " Remains constant",
+        "d": " Generates a sound signal"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "What is the primary application of a Hall Effect sensor in automotive systems?",
+      "answers": {
+        "a": "Temperature control",
+        "b": "RPM sensing",
+        "c": "Light detection",
+        "d": "Radio reception"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which configuration is common for Hall Effect sensors used in speed detection applications?",
+      "answers": {
+        "a": "Unipolar",
+        "b": "Bipolar",
+        "c": "Tripolar",
+        "d": "Quadrupolar"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": "What is the significance of the Hall Effect in a rotating wheel speed sensor?",
+      "answers": {
+        "a": "Measures tire pressure",
+        "b": "Detects wheel alignment",
+        "c": "Determines wheel speed",
+        "d": "Indicates fuel level"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": "What happens to the resistance of the Hall Effect sensor in the presence of a magnetic field?",
+      "answers": {
+        "a": "Increases",
+        "b": "Decreases",
+        "c": "Remains constant",
+        "d": "Becomes magnetic"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    }
+  
+  
+  
+  
+  
+  
+  
+  ]
+}
