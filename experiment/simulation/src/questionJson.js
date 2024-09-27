@@ -6,38 +6,38 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "A Hall sensor is based on the principle of:",
+					"QC": "What physical principle does the Hall sensor utilize to measure magnetic fields?",
 					"ANS": [{
 						"ANSID": false,
-						"content": "Photoelectric effect"
+						"content": "Electromagnetic induction"
 					}, {
-						"ANSID": false,
-						"content": "Seebeck effect"
+						"ANSID": true,
+						"content": "Hall effect"
 					}, {
 						"ANSID": false,
 						"content": "Piezoelectric effect"
 					},{
-						"ANSID": true,
-						"content": "Lorentz force "
+						"ANSID": false,
+						"content": "Doppler effect "
 					}]
 				}]
 			}, {
 
 				"QUES": [{
 					
-					"QC": "The principle of Hall effect is used in the construction of which one of",
+					"QC": "In a Hall sensor, what happens when the magnetic field is applied perpendicular to the current flow?",
 					"ANS": [{
+						"ANSID": false,
+						"content": "The current increases"
+					}, {
+						"ANSID": false,
+						"content": "A voltage is generated along the current flow"
+					}, {
 						"ANSID": true,
-						"content": "Gaussmeter"
+						"content": "A voltage is generated perpendicular to the current flow"
 					}, {
 						"ANSID": false,
-						"content": "Ammeter"
-					}, {
-						"ANSID": false,
-						"content": "Voltmeter"
-					}, {
-						"ANSID": false,
-						"content": "Galvanometer"
+						"content": "The sensor's resistance increases"
 					}]
 					
 				}]
@@ -45,19 +45,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Transducer using Hall effect converts-----",
+					"QC": "What type of materials are typically used for Hall effect sensors?",
 					"ANS": [{
+						"ANSID": false,
+						"content": "Metals "
+					}, {
 						"ANSID": true,
-						"content": "magnetism to voltage "
+						"content": "Semiconductors"
 					}, {
 						"ANSID": false,
-						"content": "pressure to resistance"
+						"content": "Insulators"
 					}, {
 						"ANSID": false,
-						"content": "magnetism to resistance"
-					}, {
-						"ANSID": false,
-						"content": "pressure to voltage"
+						"content": "Superconductors"
 					}]
 					
 				}]
@@ -65,19 +65,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Which one of the following is not an application of Hall effect sensor? ",
+					"QC": "How does the Hall sensor respond when the thickness of the sensor is increased? ",
 					"ANS": [{
 						"ANSID": false,
-						"content": "Magnetic switch for electric transducer"
-					}, {
-						"ANSID": false,
-						"content": "Measurement of current"
+						"content": "The output voltage increases"
 					}, {
 						"ANSID": true,
-						"content": " Measurement of acceleration"
+						"content": "The output voltage decreases"
 					}, {
 						"ANSID": false,
-						"content": "Measurement of power"
+						"content": " The sensitivity increases"
+					}, {
+						"ANSID": false,
+						"content": "The output voltage remains unchanged"
 					}]
 					
 				}]
@@ -85,19 +85,19 @@ QuestionsJSON = {
 
 				"QUES": [{
 					
-					"QC": "Hall sensor is used to measure the following",
+					"QC": "Which parameter of a Hall sensor determines its sensitivity to magnetic fields?",
 					"ANS": [{
 						"ANSID": false,
-						"content": "Position of shaft"
+						"content": "The temperature of the sensor"
 					}, {
 						"ANSID": true,
-						"content": "All the above"
+						"content": "The thickness and material of the sensor"
 					}, {
 						"ANSID": false,
-						"content": "Angular velocity"
+						"content": "The length of the conductor"
 					}, {
 						"ANSID": false,
-						"content": "Strength of magnetic field"
+						"content": "The applied voltage"
 					}]
 					
 				}]

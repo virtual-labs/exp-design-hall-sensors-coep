@@ -2,72 +2,65 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "  What is the Hall Effect primarily used to measure?",
+      "question": "   What is a Hall sensor primarily used for ?",
       "answers": {
-         "a": "Temperature",
-        "b": "Magnetic fields",
-        "c": " Pressure",
-        "d": " Light intensity"
+         "a": "Detecting temperature",
+        "b": "Measuring magnetic fields",
+        "c": " Measuring light intensity",
+        "d": "Detecting pressure"
       },
       
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Which physical principle is the basis of the Hall Effect?",
+      "question": "What is the main purpose of a Hall sensor?",
       "answers": {
-        "a": "Piezoelectricity",
-        "b": "Electromagnetic induction",
-        "c": "Magnetoresistance",
-        "d": "Electron movement"
+        "a": "Measure temperature",
+        "b": "Detect magnetic fields",
+        "c": "Measure sound waves",
+        "d": "Detect light intensity"
       },
      
-      "correctAnswer": "d",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "What type of material is often used in Hall Effect sensors?",
+      "question": "Where is the Hall sensor most commonly used in automobiles?",
       "answers": {
-        "a": "Copper",
-        "b": "Aluminum",
-        "c": "Silicon",
-        "d": "Semiconductor"
+        "a": "Detecting brake fluid levels",
+        "b": "Monitoring engine temperature",
+        "c": "Detecting wheel speed in ABS systems",
+        "d": "Measuring fuel levels"
       },
      
-      "correctAnswer": "d",
+      "correctAnswer": "c",
       "difficulty": "beginner"
     },
 	{
-      "question": "In which unit is the output of a Hall Effect sensor typically measured?",
+      "question": "In a Hall sensor, what happens when a magnetic field is applied perpendicular to the current ?",
       "answers": {
-        "a": "Volts (V)",
-        "b": "Amperes (A)",
-        "c": "Teslas (T)",
-        "d": "Hertz (Hz)"
+        "a": "Voltage is generated parallel to the current",
+        "b": "Voltage is generated perpendicular to the current",
+        "c": "Resistance decreases",
+        "d": "Current stops flowing"
       },
      
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
-	
 	{
-      "question": "Which one of the following is a type of flow encountered?",
+      "question": "Which of the following is a common application of Hall sensors?",
       "answers": {
-        "a": "Quantity meters",
-        "b": "Wet or dry",
-        "c": "Positive displacement meters",
-        "d": "None of the above"
+        "a": " Temperature sensing in electronic devices",
+        "b": "Position sensing in electric motors",
+        "c": "Measuring gas concentration",
+        "d": "Monitoring light levels"
       },
      
       "correctAnswer": "b",
       "difficulty": "beginner"
     }
-  
-  
-  
-  
-  
-  
   
   ]
 }

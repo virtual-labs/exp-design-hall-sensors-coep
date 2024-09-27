@@ -1,7 +1,9 @@
 
 function referenceTable()	
        
-{tableModel=''
+{
+	$("body").css("padding","0px");
+	tableModel=''
 	
 	
 	tableModel+=' <h4><center><b>HALL COEFFICIENTS </b></center><h4>  '          
@@ -11,7 +13,7 @@ function referenceTable()
 		+'    <th>Material</th>'
 		+'     <th>Flux density <br>Wb /m<sup>2</sup></th>'
 		+'      <th> Temperature &deg;C</th>'
-		+'      <th> KH (V - M) /A.Wb - m<sup>-2</sup></th>'
+		+'      <th> K<sub>H</sub> (V - M) /A.Wb - m<sup>-2</sup></th>'
 		+' </tr>'
 		+' </thead>'
 		+'<tbody>'

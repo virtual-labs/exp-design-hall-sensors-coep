@@ -57,7 +57,7 @@ var wrongCounter=0;
 	  
 	   +'<div class="col-sm-6">'
 	
-	   +'<label class="labelstyle">Current ( ampere )</label>'
+	   +'<label class="labelstyle">Current ( Ampere )</label>'
 	   +'</div>'
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="current" style="height:auto;" disabled >'
@@ -104,7 +104,7 @@ var wrongCounter=0;
 	  
 	   + '<div class="row"  id="CalculateActualFlow" hidden>'
 		   +'<div class=" col-sm-5">'
-	       +'<label  id=""  class="" style="font-size:16px;margin:15px 10px ;">Calculate Hall Sensor output (&micro;V) : </label>'
+	       +'<label  id=""  class="" style="font-size:16px;margin:15px 10px ;">Calculate hall sensor output (&micro;V) : </label>'
 	       +'</div>'
            +'<div class="col-sm-4">'
 	       +'<input type="text" id="ans" value="" style=margin:15px 10px;width:100%;"  class=" form-control" />'
@@ -318,7 +318,8 @@ var wrongCounter=0;
 					if (id <= 3) {
 						if (flowAns == finalAns) {
 							 $("#msgName").html("MESSAGE BOX ");
-								$("#modelBody").css("color", "blue");
+								$("#modelBody").css("color", "green");
+								
 								 $("#modelBody").html("TAKE THE ANOTHER READING FOR "+applicationName+".");
 							
 //							 $("#modelBody").css("color", "#000");
@@ -341,10 +342,10 @@ var wrongCounter=0;
 							
 						} else if (flowAns != finalAns) {
 							
-							 $("#modelBody").css("color", "red");
+							
 						
 						 $("#msgName").html("MESSAGE BOX ");
-							$("#modelBody").css("color", "blue");
+							 $("#modelBody").css("color", "red");
 							$("#modelBody").html("Entered value is incorrect. Let us try again . ");
 							
 						
@@ -353,15 +354,16 @@ var wrongCounter=0;
 
 					} else if (id == 4) {
 						 $("#modelBody").css("color", "#000");
-						 
+						
+							$("#modelBody").css("font-weight", "600");
 						 $("#msgName").html("FORMULA ");
 
 						 modelBody='<div class="col-sm-12 formula" > V<sub>H</sub> = K<sub>H</sub>BI/t</div>'
 							 +'<span>Where ,</span><br>' 
-						 +'<span>e -  hall voltage generated</span><br>'
+						 +'<span>V<sub>H</sub> -  hall voltage generated</span><br>'
 						 +'<span>I - current (amperes)</span><br>'
 						 +'<span>B -  Flux density (weber / m<sup>2</sup>)</span><br>'
-						 +'<span>t - thickness of the hall element (meter)</span><br>'
+						 +'<span>t - thickness of the hall element (mm)</span><br>'
 						 +'<span>K<sub>H</sub>-  hall coefficient ( V-m/A-Wbm<sup>-2</sup>)</span><br>'
 						 
 						 $("#modelBody").html(modelBody);
@@ -374,7 +376,8 @@ var wrongCounter=0;
 						if (flowAns == finalAns) {
 							
 							
-							$("#modelBody").css("color", "blue");
+							$("#modelBody").css("color", "#795548");
+							$("#modelBody").css("font-weight", "600");
 							$("#modelBody").html("TAKE THE ANOTHER READING FOR "+applicationName+".");
 							$("#CalculateActualFlow").prop("hidden",true);
 							$("#checkConfg").prop('disabled',true);

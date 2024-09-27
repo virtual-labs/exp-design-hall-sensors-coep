@@ -63,7 +63,7 @@ function tableCreate(masterJson)
 				
 				$("#tableDesign").html(tableMainDiv);
 				$("#CalculateActualFlow").prop("hidden",true);
-				$("#checkConfg").prop('disabled',false);
+				$("#checkConfg").prop('disabled',true);
 				$("#graph").click(function() {
 					
 					$("#main-div1").prop("hidden",true);
