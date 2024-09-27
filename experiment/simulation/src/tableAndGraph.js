@@ -27,7 +27,7 @@ function Table(){
 				       +' <td style="color:red;">'+currentMasterJson.demo[i].current+'</td>'
 				       +' <td>'+currentMasterJson.demo[i].thickness+'</td>'
 				       +' <td>'+currentMasterJson.demo[i].fluxDensity+'</td>'
-				       +' <td>'+currentMasterJson.demo[i].VoltageOutput+'</td>'
+				       +' <td style="color:red;">'+currentMasterJson.demo[i].VoltageOutput+'</td>'
 				       +' </tr>'
 				 }  
 	currentTable+='   </tbody>'
@@ -58,7 +58,7 @@ function Table(){
 		       +' <td>'+thicknessMasterJson.demo[i].current+'</td>'
 		      
 		       +'<td>'+thicknessMasterJson.demo[i].fluxDensity+'</td>'
-		       +' <td>'+thicknessMasterJson.demo[i].VoltageOutput+'</td>'
+		       +' <td style="color:red;">'+thicknessMasterJson.demo[i].VoltageOutput+'</td>'
 		       +' </tr>'
 		 }
 currentTable+='   </tbody>'
@@ -68,6 +68,8 @@ currentTable+='   </tbody>'
 }
 
 function Graph(){
+	$(".highcharts-legend-item highcharts-scatter-series highcharts-color-0 highcharts-series-0").css("display","none");
+	$(".highcharts-legend-item highcharts-line-series highcharts-color-1 highcharts-series-1").css("display","none");
     var xdata=[];
 	var ydata=[];
 	var graphData1=[];
@@ -77,9 +79,10 @@ function Graph(){
 			ydata[i] = parseFloat(currentMasterJson.demo[i].VoltageOutput);
 			
 		}
-	ydata.sort(function(a, b) { return a - b });
-	xdata.sort(function(a, b) { return a - b });
-	
+	Xmax=Math.max.apply(Math,xdata); 
+	Ymax=Math.max.apply(Math,ydata); 
+	Xmin=Math.min.apply(Math,xdata); 
+	Ymin=Math.min.apply(Math,ydata);
 	for (var j = 0; j < currentMasterJson.demo.length; j++) {
 			tempArr = [];
 			tempArr[0] = xdata[j];
@@ -87,26 +90,10 @@ function Graph(){
 			graphData1.push(tempArr);
 
 	}
-//		console.log("xdata "+xdata);
-//		console.log("ydata "+ydata);
-//		
-//		console.log("graphData1 "+graphData1);
-		
-//		console.log("After xdata "+xdata);
-//		console.log("After ydata "+ydata);
-		Xmax = parseFloat(xdata[xdata.length - 1]);
-		Ymax = parseFloat(ydata[ydata.length - 1]);
-//		console.log("Xmax "+Xmax);
-//		console.log("Ymax "+Ymax);
-		Xmin = parseFloat(xdata[0]);
-		Ymin = parseFloat(ydata[0]);
-		
-//		console.log("Xmin "+Xmin);
-//		console.log("Ymin "+Ymin);
-//		console.log(" graph data  " + graphData1);
+
 		Highcharts.chart('Graph1', {
 			title: {
-				text: ' Current V/S Voltage Output  '
+				text: ' Current v/s Voltage Output  '
 			},
 			subtitle: {
 				text: ''
@@ -148,7 +135,7 @@ function Graph(){
 				},
 
 				{
-					type: 'line',
+					type: 'scatter',
 					name: 'Observation value',
 
 					data: graphData1,
@@ -167,8 +154,10 @@ function Graph(){
 				ydata[i] = parseFloat(thicknessMasterJson.demo[i].VoltageOutput);
 				
 			}
-		ydata.sort(function(a, b) { return a - b });
-		xdata.sort(function(a, b) { return a - b });
+		Xmax=Math.max.apply(Math,xdata); 
+		Ymax=Math.max.apply(Math,ydata); 
+		Xmin=Math.min.apply(Math,xdata); 
+		Ymin=Math.min.apply(Math,ydata);
 		for (var j = 0; j < thicknessMasterJson.demo.length; j++) {
 				tempArr = [];
 				tempArr[0] = xdata[j];
@@ -176,27 +165,10 @@ function Graph(){
 				graphData1.push(tempArr);
 
 		}
-//			console.log("xdata "+xdata);
-//			console.log("ydata "+ydata);
-//			
-//			console.log("graphData1 "+graphData1);
-//			
-//			console.log("After xdata "+xdata);
-//			console.log("After ydata "+ydata);
-			Xmax = parseFloat(xdata[xdata.length - 1]);
-			Ymax = parseFloat(ydata[ydata.length - 1]);
-			
-//			console.log("Xmax "+Xmax);
-//			console.log("Ymax "+Ymax);
-			Xmin = parseFloat(xdata[0]);
-			Ymin = parseFloat(ydata[0]);
-			
-//			console.log("Xmin "+Xmin);
-//			console.log("Ymin "+Ymin);
-//			console.log(" graph data  " + graphData1);
+
 			Highcharts.chart('Graph2', {
 				title: {
-					text: ' Thickness V/S Voltage Output  '
+					text: ' Thickness v/s Voltage Output  '
 				},
 				subtitle: {
 					text: ''
@@ -238,7 +210,7 @@ function Graph(){
 					},
 
 					{
-						type: 'line',
+						type: 'scatter',
 						name: 'Observation value',
 
 						data: graphData1,

@@ -1,8 +1,8 @@
 ### Aim 
-Understand operation of Hall sensor.
+Design of hall sensor and its applications.
 
 ### Objective  
-- Understand Hall effect principle and its use sensor
+- Understand working of Hall effect sensor.
 - Configure Hall sensor parameters like thickness, material. 
 - Observe hall sensor output voltage for change in thickness.
 - Observe hall sensor output voltage for change in current.

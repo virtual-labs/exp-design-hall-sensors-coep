@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": " How does a Hall Effect sensor respond to an increasing magnetic field?",
+      "question": "How does increasing the thickness of a Hall sensor affect its output voltage ?",
       "answers": {
          "a": "Increases output voltage",
         "b": "Decreases output voltage",
@@ -14,52 +14,52 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is the primary application of a Hall Effect sensor in automotive systems?",
+      "question": " In current sensing applications, what does the Hall sensor measure to determine the current flowing through a conductor ?",
       "answers": {
-        "a": "Temperature control",
-        "b": "RPM sensing",
-        "c": "Light detection",
-        "d": "Radio reception"
+        "a": "Voltage drop across the conductor",
+        "b": "Magnetic field produced by the current",
+        "c": "Resistance of the conductor",
+        "d": "Temperature of the conductor"
       },
      
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "Which configuration is common for Hall Effect sensors used in speed detection applications?",
+      "question": "What is the primary effect of increasing the current through a Hall sensor on its output voltage?",
       "answers": {
-        "a": "Unipolar",
-        "b": "Bipolar",
-        "c": "Tripolar",
-        "d": "Quadrupolar"
+        "a": "The output voltage decreases",
+        "b": "The output voltage increases proportionally",
+        "c": "The output voltage remains constant",
+        "d": "The output voltage oscillates"
       },
      
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
 	{
-      "question": "What is the significance of the Hall Effect in a rotating wheel speed sensor?",
+      "question": "How does the thickness of the Hall sensor influence its sensitivity to magnetic fields?",
       "answers": {
-        "a": "Measures tire pressure",
-        "b": "Detects wheel alignment",
-        "c": "Determines wheel speed",
-        "d": "Indicates fuel level"
+        "a": "Thicker sensors have higher sensitivity",
+        "b": " Thicker sensors have lower sensitivity",
+        "c": " Thickness has no effect on sensitivity",
+        "d": "Sensitivity only depends on material, not thickness"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
 	
 	{
-      "question": "What happens to the resistance of the Hall Effect sensor in the presence of a magnetic field?",
+      "question": "In a Hall effect sensor, if the thickness of the sensor decreases, what happens to the output voltage for the same applied current and magnetic field?",
       "answers": {
-        "a": "Increases",
-        "b": "Decreases",
-        "c": "Remains constant",
-        "d": "Becomes magnetic"
+        "a": "Output voltage increases",
+        "b": "Output voltage decreases",
+        "c": "Output voltage stays the same",
+        "d": "Output voltage fluctuates"
       },
      
-      "correctAnswer": "c",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     }
   

@@ -1,33 +1,30 @@
 ### Procedure
 
 #### Prerequisite : 
-- Answer all the questions and click on "Submit Test" button.
-- Click on "Next" button.
+- Attempt all questions.
 
-#### Configuration and simulation
-
-##### Click on the "Reference table" button to get References of hall coefficients for different material.
+#### Use "Reference table" button to get hall coefficients for different material.
 
 ##### Application type : Measurement of Current
 
-- Step 1 : Configure hall effect sensor by selecting material, flux density, current, and thickness as shown below. 
+- Step 1 : Configure hall sensor parameters material, flux density, current and thickness. 
 
-![ *simulation_halleffect*](images/simulation_halleffect.PNG)
+- Step 2 : Click on "simulation" button.
 
-- Step 2 : Click on next simulation button.
+- Step 3 : Click on green button to start mimic.
 
-- Step 3 : Click on green circle appeared on the screen in simulation block to view hall sensor simulator.
+- Step 4 : Calculate hall sensor output for change in current.
 
-- Step 4 : Calculate hall sensor output and enter in the textbox and check the answer by clicking on "Submit" button.
+- Step 5 : Enter the answer in textbox and click on "Submit" button.
 
-- Step 5 : Repeat the above steps for all the available current readings.
+- Step 5 : Repeat the above steps for five readings.
 
-- Step 6 : Click on "Select another application" button.
+- Step 6 : Observe above sensor output for diffrent material.
 
 ##### Application type : Measurement of Thickness
 
 - Step 7 : Select another application type for thickness.
 
-- Step 8 : Repeat Step 1 to Step 5 for different thickness readings.
+- Step 8 : Repeat Step 1 to Step 5 for change in thickness.
 
-- Step 9 : Click on "Show Result" button to get the result.
+- Step 9 : To get observation table and graph click on "Show Result" button.
