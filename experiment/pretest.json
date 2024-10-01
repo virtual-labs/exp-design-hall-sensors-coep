@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "   What is a Hall sensor primarily used for ?",
+      "question": "1)What is a Hall sensor primarily used for ?",
       "answers": {
          "a": "Detecting temperature",
         "b": "Measuring magnetic fields",
@@ -14,7 +14,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "What is the main purpose of a Hall sensor?",
+      "question": "2)What is the main purpose of a Hall sensor?",
       "answers": {
         "a": "Measure temperature",
         "b": "Detect magnetic fields",
@@ -26,7 +26,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "Where is the Hall sensor most commonly used in automobiles?",
+      "question": "3)Where is the Hall sensor most commonly used in automobiles?",
       "answers": {
         "a": "Detecting brake fluid levels",
         "b": "Monitoring engine temperature",
@@ -38,7 +38,7 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "In a Hall sensor, what happens when a magnetic field is applied perpendicular to the current ?",
+      "question": "4)In a Hall sensor, what happens when a magnetic field is applied perpendicular to the current ?",
       "answers": {
         "a": "Voltage is generated parallel to the current",
         "b": "Voltage is generated perpendicular to the current",
@@ -50,7 +50,7 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "Which of the following is a common application of Hall sensors?",
+      "question": "5)Which of the following is a common application of Hall sensors?",
       "answers": {
         "a": " Temperature sensing in electronic devices",
         "b": "Position sensing in electric motors",
