@@ -22,7 +22,7 @@ A semiconductor Hall element can be used to transduce magnetic flux into a volta
 This element gives a continuous output proportional to the magnetic flux variation.
 
 The disadvantages are :
-(i) this element is sensitive to temperature vacations.
+(i) this element is sensitive to temperature variations.
 (ii) The Hall coefficient changes from element to element needing individual calibration.
 
 #### Hall displacement transducer

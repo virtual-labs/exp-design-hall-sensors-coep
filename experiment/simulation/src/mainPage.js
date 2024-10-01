@@ -268,7 +268,7 @@ var wrongCounter=0;
 				}
 				else if(materialSelection==3)
 				{
-					kh=-52*Math.pow(10,-6);
+					kh=-52*Math.pow(10,-12);
 				}
 				else if(materialSelection==4)
 				{
