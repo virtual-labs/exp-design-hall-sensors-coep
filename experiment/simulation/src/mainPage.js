@@ -61,7 +61,7 @@ var wrongCounter=0;
 	   +'</div>'
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="current" style="height:auto;" disabled >'
-	   +'<option value="-1" disabled>--- Select Current --- </option>'
+	   +'<option value="-1" >--- Select Current --- </option>'
 	   +'<option value="1" id="option1" >1.0  </option>'
 	   +'<option value="1.5" id="option2"> 1.5</option>'
 	   +'<option value="2"   id="option3">2.0 </option>'
@@ -81,7 +81,7 @@ var wrongCounter=0;
 	   
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="thickness" style="height:auto;"  disabled>'
-	   +'<option value="-1" disabled>--- Select Thickness --- </option>'
+	   +'<option value="-1" >--- Select Thickness --- </option>'
 	   +'<option value="1" id="optiont1" >1.0  </option>'
 	   +'<option value="1.5" id="optiont2">1.5</option>'
 	   +'<option value="2.0" id="optiont3">2.0 </option>'
@@ -209,7 +209,11 @@ var wrongCounter=0;
 					 +'</div>'
 					 +'<div class="col-sm-6" >'
 					 +'<select  class="form-control selectConf"   style="height:auto;" id="fluxDensity1" >'
+					
 					  for(i=0;i<masterJsonArr[materialValue].range.length;i++){
+						  if(i==0){
+							  htm+='<option value="-1">Select Flux Density </option>'
+						  }
 						  htm+='<option value="'+masterJsonArr[materialValue].range[i]+'" >'+masterJsonArr[materialValue].range[i]+'  </option>'
 					  } 
 				     htm+='</select>'
