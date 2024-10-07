@@ -1,6 +1,8 @@
 function tableAndGraph(){
 	$("#tableDesign").remove();
 	$("#referenceTable").remove();
+	$("#current").prop("disabled",true);
+	$("#thickness").prop("disabled",true);
 	Table();
 	Graph();
 }
@@ -17,8 +19,8 @@ function Table(){
 				 +'     <tr class="tableHeader">'
 				 +'       <th>Current (ampere)</th>'
 				 +'       <th>Thickness (mm)</th>'
-				 +'       <th>fluxDensity</th>'
-				 +'       <th>Voltage Output(V)</th>'
+				 +'       <th>fluxDensity(weber/m<sup>2</sup> )</th>'
+				 +'       <th>Voltage Output(&micro;V)</th>'
 				 +'     </tr>'
 				 +'   </thead>'
 				 +'    <tbody>'
@@ -46,8 +48,8 @@ function Table(){
 		 +'     <tr class="tableHeader">'
 		 +'       <th>Thickness (mm)</th>'
 		 +'       <th>Current (ampere)</th>'
-		 +'       <th>fluxDensity</th>'
-		 +'       <th>Voltage Output(V)</th>'
+		 +'       <th>fluxDensity(weber/m<sup>2</sup> )</th>'
+		 +'       <th>Voltage Output(&micro;V)</th>'
 		 
 		 +'     </tr>'
 		 +'   </thead>'
@@ -68,8 +70,7 @@ currentTable+='   </tbody>'
 }
 
 function Graph(){
-	$(".highcharts-legend-item highcharts-scatter-series highcharts-color-0 highcharts-series-0").css("display","none");
-	$(".highcharts-legend-item highcharts-line-series highcharts-color-1 highcharts-series-1").css("display","none");
+	
     var xdata=[];
 	var ydata=[];
 	var graphData1=[];
@@ -95,12 +96,21 @@ function Graph(){
 			title: {
 				text: ' Current v/s Voltage Output  '
 			},
+			legend: {
+				    symbolPadding: 0,
+				    symbolWidth: 0,
+				    symbolHeight: 0,
+				    squareSymbol: false,
+					enabled: false
+				  },
+				exporting: { enabled: false },
+				credits: { enabled: false},
 			subtitle: {
 				text: ''
 			},
 			 tooltip: {
 		            formatter: function() {
-		                return 'Current : '+ this.x+'</b><br/>Voltage : '+ this.y+'</b><br/>';
+		                return 'Current(ampere) : '+ this.x+'</b><br/>Voltage(&micro;V) : '+ this.y+'</b><br/>';
 		                   
 		            }
 		        },
@@ -108,20 +118,43 @@ function Graph(){
 				min:Xmin,
 				max: Xmax,
 				title: {
-					text: 'Current'
-				}
+					text: 'Current(ampere)',
+					
+				},
+				
+			labels: {
+            style: {
+                fontSize: '15px', // Font size for y-axis labels
+				color:"#1e55d0"
+            }
+        },
 			},
 			yAxis: {
 				min: Ymin,
 				max: Ymax,
 				title: {
-					text: 'Voltage'
-				}
+					text: 'Voltage(&micro;V)',
+					style: {
+					fontSize: '20px', // Font size for y-axis labels
+					color:"black"
+					  },
+				},
+				
+		labels: {
+            style: {
+                fontSize: '15px', // Font size for y-axis labels
+				color:"#ca1c5d"
+            }
+        },
 			},
 			series: [
+				
 				{
 					type: 'scatter',
 //					name: 'Standard value',
+				style: {
+                    fontSize: '50px' // Font size for the data labels
+                },
 					data: [[Xmin,Ymin], [Xmax, Ymax]],
 					marker: {
 						enabled: false
@@ -136,7 +169,7 @@ function Graph(){
 
 				{
 					type: 'scatter',
-					name: 'Observation value',
+//					name: 'Observation value',
 
 					data: graphData1,
 					marker: {
@@ -170,12 +203,24 @@ function Graph(){
 				title: {
 					text: ' Thickness v/s Voltage Output  '
 				},
+				legend: {
+				    symbolPadding: 0,
+				    symbolWidth: 0,
+				    symbolHeight: 0,
+				    squareSymbol: false,
+					enabled: false,
+					 itemStyle: {
+                   fontSize: '50px' // Set the desired font size here
+        }
+				  },
+				exporting: { enabled: false },
+				credits: { enabled: false},
 				subtitle: {
 					text: ''
 				},
 				 tooltip: {
 			            formatter: function() {
-			                return 'Thickness : '+ this.x+'</b><br/>Voltage : '+ this.y+'</b><br/>';
+			                return 'Thickness(mm) : '+ this.x+'</b><br/>Voltage(&micro;V) : '+ this.y+'</b><br/>';
 			                   
 			            }
 			        },
@@ -183,24 +228,41 @@ function Graph(){
 					min:Xmin ,
 					max: Xmax,
 					title: {
-						text: 'Thickness'
-					}
+						text: 'Thickness(mm)'
+					},
+					labels: {
+            style: {
+                fontSize: '15px', // Font size for y-axis labels
+				color:"#1e55d0"
+            }
+        },
 				},
 				yAxis: {
 					min: Ymin,
 					max: Ymax,
 					title: {
-						text: 'Voltage'
-					}
+						text: 'Voltage(&micro;V)'
+					},
+					labels: {
+            style: {
+                fontSize: '15px', // Font size for y-axis labels
+				color:"#ca1c5d"
+            }
+        },
 				},
 				series: [
+				
 					{
 						type: 'scatter',
+						style: {
+                    fontSize: '50px' // Font size for the data labels
+                },
 //						name: 'Standard value',
 						data: [[Xmin,Ymin], [Xmax, Ymax]],
 						marker: {
 							enabled: false
 						},
+						 
 						states: {
 							hover: {
 								lineWidth: 0
