@@ -17,14 +17,14 @@
 
 - Step 5 : Enter the answer in textbox and click on "Submit" button.
 
-- Step 5 : Repeat the above steps for five readings.
+- Step 6 : Repeat the above steps for five readings.
 
-- Step 6 : Observe above sensor output for different material.
+- Step 7 : Observe above sensor output for different material.
 
 ##### Application type : Measurement of Thickness
 
-- Step 7 : Select another application type for thickness.
+- Step 8 : Select another application type for thickness.
 
-- Step 8 : Repeat Step 1 to Step 5 for change in thickness.
+- Step 9 : Repeat Step 1 to Step 5 for change in thickness.
 
-- Step 9 : To get observation table and graph click on "Show Result" button.
+- Step 10 : To get observation table and graph click on "Show Result" button.
