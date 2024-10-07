@@ -2,7 +2,7 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1)What is a Hall sensor primarily used for ?",
+      "question": "1) What is a Hall sensor primarily used for ?",
       "answers": {
          "a": "Detecting temperature",
         "b": "Measuring magnetic fields",
@@ -14,19 +14,19 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2)What is the main purpose of a Hall sensor?",
+      "question": "2) What material is commonly used in the construction of Hall sensors?",
       "answers": {
-        "a": "Measure temperature",
-        "b": "Detect magnetic fields",
-        "c": "Measure sound waves",
-        "d": "Detect light intensity"
+        "a": "Silicon",
+        "b": "Copper",
+        "c": "Iron",
+        "d": "Aluminum"
       },
      
-      "correctAnswer": "b",
+      "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "3)Where is the Hall sensor most commonly used in automobiles?",
+      "question": "3) Where is the Hall sensor most commonly used in automobiles?",
       "answers": {
         "a": "Detecting brake fluid levels",
         "b": "Monitoring engine temperature",
@@ -38,19 +38,20 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "4)In a Hall sensor, what happens when a magnetic field is applied perpendicular to the current ?",
+      "question": "4) What is the main advantage of using a Hall sensor in speed detection applications?",
       "answers": {
-        "a": "Voltage is generated parallel to the current",
-        "b": "Voltage is generated perpendicular to the current",
-        "c": "Resistance decreases",
-        "d": "Current stops flowing"
+        "a": "High cost",
+        "b": " Contactless measurement",
+        "c": "Low durability",
+        "d": "Inaccuracy in harsh environments"
+		
       },
      
       "correctAnswer": "b",
       "difficulty": "beginner"
     },
 	{
-      "question": "5)Which of the following is a common application of Hall sensors?",
+      "question": "5) Which of the following is a common application of Hall sensors?",
       "answers": {
         "a": " Temperature sensing in electronic devices",
         "b": "Position sensing in electric motors",
