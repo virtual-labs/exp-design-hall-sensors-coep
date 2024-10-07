@@ -3,11 +3,11 @@
 #### Prerequisite : 
 - Attempt all questions.
 
-#### Use "Reference table" button to get hall coefficients for different material.
+#### Use "Reference table" button to get hall coefficients for different materials.
 
 ##### Application type : Measurement of Current
 
-- Step 1 : Configure hall sensor parameters material, flux density, current and thickness. 
+- Step 1 : Configure hall sensor parameters: material, flux density, current and thickness. 
 
 - Step 2 : Click on "simulation" button.
 
@@ -19,7 +19,7 @@
 
 - Step 5 : Repeat the above steps for five readings.
 
-- Step 6 : Observe above sensor output for diffrent material.
+- Step 6 : Observe above sensor output for different material.
 
 ##### Application type : Measurement of Thickness
 

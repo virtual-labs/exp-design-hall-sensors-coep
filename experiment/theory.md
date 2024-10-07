@@ -2,7 +2,7 @@
 
 #### Hall element
 
-A number of transducers can be designed using a Hall element This Hall effect is possesed by certain metals and certain semiconductor elements. When a Hall element is subjected to a magnetic field in one direction, an electric current in another direction which is perpendicular to the direction of the magnetic flux, then an electric potential is generated in a third direction which is mutually perpendicular to the other two directions. The magnitude of the voltage generated depends on the strength of the magnetic field, the strength of the current and the property of the conductor.
+A number of transducers can be designed using a Hall element This Hall effect is possessed by certain metals and certain semiconductor elements. When a Hall element is subjected to a magnetic field in one direction, an electric current in another direction which is perpendicular to the direction of the magnetic flux, then an electric potential is generated in a third direction which is mutually perpendicular to the other two directions. The magnitude of the voltage generated depends on the strength of the magnetic field, the strength of the current and the property of the conductor.
 
 ![*Turbine_constr2*](images/Newhalleffectexp.png)
 ![*Turbine_constr2*](images/formula.png)
@@ -11,7 +11,7 @@ A number of transducers can be designed using a Hall element This Hall effect is
 
 
 The nominal values of Hall coefficients for different materials are given in Table
-Hall coefficients
+Hall coefficients.
 
 
 ![*Turbine_constr2*](images/table.png)
