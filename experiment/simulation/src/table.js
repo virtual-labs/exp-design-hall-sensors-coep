@@ -11,16 +11,16 @@ function tableCreate(masterJson)
 //			console.log(masterJson);
 			var tableMainDiv=""
 					
-					+ '<div class="well well-lg">'
+					+ '<div class="well well-lg"  style="    overflow: scroll;">'
 					+'<center class="blink"> TAKE ALL '+applicationName+' READINGS </center>'
 					+'<center><b>Material Type : '+masterJson.demo[0].material+'</b></center>'
 				    +'<table class="table  table-bordered table-hover" >'
 					+ ' <thead>'
 
 					+ '  <tr>'
-					+ '  <th scope="col"><center>Current (ampere)</center></th>'
-					+ '   <th scope="col"><center >Thickness  (mm) </center></th>'
-					+ '  <th scope="col"><center>fluxDensity</center></th>'
+					+ '  <th scope="col"><center>Current(ampere)</center></th>'
+					+ '   <th scope="col"><center >Thickness(mm) </center></th>'
+					+ '  <th scope="col"><center>fluxDensity(weber/m<sup>2</sup>)</center></th>'
 					+ '  <th scope="col"><center>Voltage Output(&micro;V)</center></th>'
 					
 					+ '   </tr>'
@@ -43,20 +43,20 @@ function tableCreate(masterJson)
 //						 console.log('appCount'+appCount);
 						 if(appCount==0){
 							 $("#modelBody").html("SELECT ANOTHER APPLICATION  ");
-							 tableMainDiv +='<button type="button" class="btn btn-danger" id="continue" style="width:100%;margin-top: -6px;"  >SELECT ANOTHER APPLICATION   </button>'	 
+							 tableMainDiv +='<button type="button" class="btn btn-danger" id="continue" style="width:100%;margin-top: -6px;"  >SELECT ANOTHER APPLICATION   </button>'	
+													 
 						 }
 						 else
 							 {
+								 $("#current").prop("disabled",true);
+							$("#thickness").prop("disabled",true);	
 							 $("#modelBody").html("Click on 'SHOW RESULT' button to get results based on the selected current and thickness.");
 							 $(".blink").prop('hidden',true);
 							 tableMainDiv +='<button type="button" class="btn btn-danger" id="graph" style="width:100%;margin-top: -6px;"  >SHOW RESULT</button>'	 
 						
 //							 $("#modelBody").html('<img src="images/cong.gif" class="img-fluid" > ');
 							 $("#checkConfg").prop('disabled',true);
-//							 $("#main-div-conf").html('');
-//							 $("#tableDesign").html('');
-//							 $("#canvas-div").html('');
-//							 $("#main-div-conf").html('');
+
 							 } 
 						 
 				      }
@@ -71,16 +71,17 @@ function tableCreate(masterJson)
 //					console.log("rdfgffh");
 				});
 				$("#continue").click(function() {
+
 					appCount++;
 					if(appCount==1)
 					{mainPage();
 						if(applicationSelection==1){
-							$("#current").prop('disabled',false);
+							$("#current").prop('disabled',true);
 							$("#thickness").prop('disabled',true);
 						}
 						else if(applicationSelection==2){
 							$("#current").prop('disabled',true);
-							$("#thickness").prop('disabled',false);
+							$("#thickness").prop('disabled',true);
 							}
 						
 						$("#applicationSelection1").prop('disabled',false);

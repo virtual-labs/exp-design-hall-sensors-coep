@@ -33,15 +33,15 @@ var wrongCounter=0;
 
 	   +'<select  class="form-control selectConf"  id="materialSelection" style="height:auto;" disabled >'
 	   +'<option value="-1">--- Select material --- </option>'
-	   +'<option value="0" id="As" >As  </option>'
+	   +'<option value="0" id="As" >As</option>'
 	   +'<option value="1" id="Bi">Bi</option>'
-	   +'<option value="2" id="C">C  </option>'
-	   +'<option value="3" id="Cu">Cu  </option>'
+	   +'<option value="2" id="C">C</option>'
+	   +'<option value="3" id="Cu">Cu</option>'
 	   +'<option value="4" id="Fe">Fe</option>'
-	   +'<option value="5" id="Ge">Ge  </option>'
-	   +'<option value="6"  id="Si">Si  </option>'
+	   +'<option value="5" id="Ge">Ge</option>'
+	   +'<option value="6"  id="Si">Si</option>'
 	   +'<option value="7" id="Sn">Sn</option>'
-	   +'<option value="8" id="Te">Te  </option>'
+	   +'<option value="8" id="Te">Te</option>'
 	   +'</select>'
 	   +'</div>'
 	   +'</div>'
@@ -57,11 +57,11 @@ var wrongCounter=0;
 	  
 	   +'<div class="col-sm-6">'
 	
-	   +'<label class="labelstyle">Current ( Ampere )</label>'
+	   +'<label class="labelstyle">Current(Ampere)</label>'
 	   +'</div>'
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="current" style="height:auto;" disabled >'
-	   +'<option value="-1">--- Select Current --- </option>'
+	   +'<option value="-1" disabled>--- Select Current --- </option>'
 	   +'<option value="1" id="option1" >1.0  </option>'
 	   +'<option value="1.5" id="option2"> 1.5</option>'
 	   +'<option value="2"   id="option3">2.0 </option>'
@@ -76,12 +76,12 @@ var wrongCounter=0;
 	
 	   +'<div class="row">'
 	   +'<div class="col-sm-6">'
-	   +'<label for="meter">Thickness of the Hall element ( mm ) </label>'
+	   +'<label for="meter">Thickness of the Hall element(mm) </label>'
 	   +'</div>'
 	   
 	   +'<div class="col-sm-6">'
 	   +'<select  class="form-control selectConf"  id="thickness" style="height:auto;"  disabled>'
-	   +'<option value="-1">--- Select Thickness --- </option>'
+	   +'<option value="-1" disabled>--- Select Thickness --- </option>'
 	   +'<option value="1" id="optiont1" >1.0  </option>'
 	   +'<option value="1.5" id="optiont2">1.5</option>'
 	   +'<option value="2.0" id="optiont3">2.0 </option>'
@@ -149,17 +149,44 @@ var wrongCounter=0;
 			});
 			
 			$('#thickness').change(function(){
+				
+				if($('#thickness').val()=="-1"){
+						$("#modelMsg").html("Wrong configuration.");
+						 $("#checkConfg").prop('disabled',true);	
+					}
+					else{
+				
 				$("#checkConfg").prop('disabled',false);
+					}
 				
 			});
 			
 			$('#current').change(function(){
+				if($('#current').val()=="-1"){
+						$("#modelMsg").html("Wrong configuration.");
+						 $("#checkConfg").prop('disabled',true);	
+					}
+					else{
+				
 				$("#checkConfg").prop('disabled',false);
+					}
 				
 			});
 		$('#applicationSelection1').change(function(){
 			applicationSelection=$('#applicationSelection1').val();
+			
+			if(applicationSelection=="1"){
+					$("#current").prop('disabled',false);
+					$("#thickness").prop('disabled',true);
+			}
+			else if(applicationSelection=="2"){
+					$("#current").prop('disabled',true);
+					$("#thickness").prop('disabled',false);
+			}
+			
+			
 			$('#materialSelection').prop('disabled',false);
+			
 			
 		});
 		 $('#materialSelection').change(function(){
@@ -167,7 +194,7 @@ var wrongCounter=0;
 			 materialValue=$("#materialSelection").children(":selected").attr("value");
 			 
 			 
-			 if(materialValue==-1)
+			 if(materialValue=="-1")
 				 {
 				 $("#modelMsg").html("<b class='boldTextRed'>Select Material Type</b> ");
 				 }
@@ -194,11 +221,17 @@ var wrongCounter=0;
 			 });
 	  
 	   $("#checkConfg").click(function(){
-				   current=$("#current").val();
+		           current=$("#current").val();
 				   thickness=$("#thickness").val();
 				   fluxDensity=$("#fluxDensity1").val();
 				   materialIdName=$("#materialSelection").children(":selected").attr("id");
 				   materialSelection= $("#materialSelection").val();
+					if(current=="-1"||thickness=="-1"){
+						$("#modelBody").html("Wrong configuration.");
+						 $("#checkConfg").prop('disabled',true);	
+					}
+					else{
+				   
 //				   material=$("#materialSelection").children(":selected").attr("id");
 //				   console.log("material"+material);
 				   
@@ -238,7 +271,7 @@ var wrongCounter=0;
 		   $("#flowAns").val('');
 			$("body").css("padding","0px 0px 0px 0px");
 			
-			
+					}
 			 
 	   });
 	   
@@ -304,15 +337,15 @@ var wrongCounter=0;
 //				console.log("KH   "+ kh);
 
 				if(flowAns==""){
-					
-					$("#modelMsg").html("Enter numeric value ");
+					$("#modelMsg").html("");
+					$("#modelMsg").html("Enter numeric value. ");
 					
 				}
 				else
 					{
 					if(flowAns==""){
-						
-						$("#modelMsg").html("Enter numeric value ");
+						$("#modelMsg").html("");
+						$("#modelMsg").html("Enter numeric value. ");
 						
 					}
 					if (id <= 3) {
@@ -346,7 +379,7 @@ var wrongCounter=0;
 						
 						 $("#msgName").html("MESSAGE BOX ");
 							 $("#modelBody").css("color", "red");
-							$("#modelBody").html("Entered value is incorrect. Let us try again . ");
+							$("#modelBody").html("<b>Entered value is incorrect. Let us try again . </b>");
 							
 						
 						}
@@ -361,7 +394,7 @@ var wrongCounter=0;
 						 modelBody='<div class="col-sm-12 formula" > V<sub>H</sub> = K<sub>H</sub>BI/t</div>'
 							 +'<span>Where ,</span><br>' 
 						 +'<span>V<sub>H</sub> -  hall voltage generated</span><br>'
-						 +'<span>I - current (amperes)</span><br>'
+						 +'<span>I - current (ampere)</span><br>'
 						 +'<span>B -  Flux density (weber / m<sup>2</sup>)</span><br>'
 						 +'<span>t - thickness of the hall element (mm)</span><br>'
 						 +'<span>K<sub>H</sub>-  hall coefficient ( V-m/A-Wbm<sup>-2</sup>)</span><br>'
@@ -397,7 +430,7 @@ var wrongCounter=0;
 						} else {
 							 $("#msgName").html("MESSAGE BOX ");
 							$("#modelBody").css("color", "blue");
-							 $("#modelBody").html("Correct answer is " + finalAns);
+							 $("#modelBody").html("<b>Correct answer is " + finalAns+"</b>");
 							
 							
 
