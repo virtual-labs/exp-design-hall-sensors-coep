@@ -95,12 +95,28 @@ var wrongCounter=0;
 	  
 	   +'<div class="row"  >'
 	   +'<div class="col-sm-12" id="mimicbtnquesAns">'
-	 +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="checkConfg" ><b>SIMULATION</b></button>'
-	   
-	      +'</div>'
-
-
-	   +'</div>'
+	 +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" data-toggle="modal" data-target="#myModal1"  id="checkConfg" ><b>SIMULATION</b></button>'
+	  +'</div>'
+ +'</div>'
+ + ' <!-- Modal -->'
+			+ '<div class="modal fade" id="myModal1" role="dialog">'
+			+ ' <div class="modal-dialog modal-md">'
+			+ '    <div class="modal-content">'
+			+ '     <div class="modal-header">'
+			
+			+ '       <h4 class="modal-title" id="msgName1">Message box</h4>'
+			+ '       <button type="button" class="close" data-dismiss="modal"          style="color:#fff;">&times;</button>'
+			+ '     </div>'
+			+ '     <div class="modal-body" id="modelBody1">'
+			+ '       <p id="modelMsg1">This is a small modal.</p>'
+			+ '     </div>'
+			+ '     <div class="modal-footer">'
+			+ '       <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>'
+			+ '     </div>'
+			+ '   </div>'
+			+ ' </div>'
+			+ '</div>'
+			//model Close
 	  
 	   + '<div class="row"  id="CalculateActualFlow" hidden>'
 		   +'<div class=" col-sm-5">'
@@ -151,7 +167,7 @@ var wrongCounter=0;
 			$('#thickness').change(function(){
 				
 				if($('#thickness').val()=="-1"){
-						$("#modelMsg").html("Wrong configuration.");
+						alert("Wrong configuration.");
 						 $("#checkConfg").prop('disabled',true);	
 					}
 					else{
@@ -163,7 +179,7 @@ var wrongCounter=0;
 			
 			$('#current').change(function(){
 				if($('#current').val()=="-1"){
-						$("#modelMsg").html("Wrong configuration.");
+						alert("Wrong configuration.");
 						 $("#checkConfg").prop('disabled',true);	
 					}
 					else{
@@ -230,9 +246,18 @@ var wrongCounter=0;
 				   fluxDensity=$("#fluxDensity1").val();
 				   materialIdName=$("#materialSelection").children(":selected").attr("id");
 				   materialSelection= $("#materialSelection").val();
-					if(current=="-1"||thickness=="-1"){
-						$("#modelBody").html("Wrong configuration.");
-						 $("#checkConfg").prop('disabled',true);	
+				    console.log("current "+current);
+					console.log("thickness "+thickness);
+					console.log("fluxDensity "+fluxDensity);
+					console.log("materialSelection "+materialSelection);
+					
+					if(current=="-1"||thickness=="-1"||fluxDensity=="-1"||materialSelection=="-1"){
+						 $("#checkConfg").prop('disabled',true);
+						//$("#modelMsg1").html("Wrong configuration.");
+						$("#modelMsg").html("");
+						$("#modelMsg").html("Wrong configuration. ");
+						
+							 alert("Wrong configuration.");
 					}
 					else{
 				   

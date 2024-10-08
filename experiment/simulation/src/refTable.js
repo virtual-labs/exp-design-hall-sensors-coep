@@ -7,7 +7,7 @@ function referenceTable()
 	
 	
 	tableModel+=' <h4><center><b>HALL COEFFICIENTS </b></center><h4>  '          
-		+'<table class="table  table-bordered table-hover">'
+		+'<table class="table  table-bordered table-hover" style="font-weight: 700;">'
 		+' <thead>'
 		+'  <tr class="tableHeader">'
 		+'    <th>Material</th>'
