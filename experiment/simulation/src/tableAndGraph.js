@@ -1,4 +1,5 @@
 function tableAndGraph(){
+	$("#procedure").prop("hidden",true);
 	$("#tableDesign").remove();
 	$("#referenceTable").remove();
 	$("#current").prop("disabled",true);
@@ -119,6 +120,10 @@ function Graph(){
 				max: Xmax,
 				title: {
 					text: 'Current(ampere)',
+					style: {
+					fontSize: '15px', // Font size for y-axis labels
+					color:"black"
+					  },
 					
 				},
 				
@@ -135,7 +140,7 @@ function Graph(){
 				title: {
 					text: 'Voltage(&micro;V)',
 					style: {
-					fontSize: '20px', // Font size for y-axis labels
+					fontSize: '15px', // Font size for y-axis labels
 					color:"black"
 					  },
 				},
@@ -228,7 +233,11 @@ function Graph(){
 					min:Xmin ,
 					max: Xmax,
 					title: {
-						text: 'Thickness(mm)'
+						text: 'Thickness(mm)',
+						style: {
+					fontSize: '15px', // Font size for y-axis labels
+					color:"black"
+					  },
 					},
 					labels: {
             style: {
@@ -241,7 +250,11 @@ function Graph(){
 					min: Ymin,
 					max: Ymax,
 					title: {
-						text: 'Voltage(&micro;V)'
+						text: 'Voltage(&micro;V)',
+						style: {
+					fontSize: '15px', // Font size for y-axis labels
+					color:"black"
+					  },
 					},
 					labels: {
             style: {
