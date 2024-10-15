@@ -2,7 +2,7 @@
 <html>
 
 <head>
-<title> Hall Effect Sensor </title>
+<title> Result Page </title>
 <meta charset="ISO-8859-1">
  <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/mainPage.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/hall.css">
-
+     <link rel="stylesheet" href="css/result.css">
 </head>
 <style>
 .blink {
@@ -24,6 +24,7 @@
             color: red;
             font-family: sans-serif;
 			font-weight: bold;
+			color: #a94442;
 			background: #ebe2d4;
 			padding: 7px 20px;
 			border-radius: 15px;
@@ -33,9 +34,10 @@
                 opacity: 0.2;
             }
         }
+        
 </style>
 
-<body  style="padding-right: 17px;">
+<body  style="padding:px;">
 
 <header>
 		<img class="COEPLogo" src='images/COEPlogo.png' />
@@ -45,13 +47,12 @@
 	</header>
 	
 	
-	<div  class="row container-fluid" id="">
+	<div  class="row container-fluid" id="main-div" style="padding:5px">
+	<div class="col-lg-9">
+    </div>
 	<div class="col-lg-1" >
+<button type="button" class="btn btn-danger"  id="result" style="margin-top:10px;" hidden >Show Result</button>
 
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-danger"  id="procedure" data-toggle="modal" data-target="#exampleModalCenter1" style="margin-top:10px;" >
- Procedure
-</button>
 
 <!-- Modal -->
 <div class="modal fade-lg" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
@@ -75,9 +76,12 @@
   </div>
 </div>
 </div>
-<div class="col-lg-4">
-</div>
-<div class="col-lg-6">
+
+
+<div class="col-lg-1">
+<button type="button" class="btn btn-danger"  id="procedure" data-toggle="modal" data-target="#exampleModalCenter1" style="margin-top:10px;" >
+ Procedure
+</button>
 </div>
 <div class="col-lg-1" >
 
@@ -101,7 +105,7 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
-<!--         <button type="button" class="btn btn-primary">Cancel</button> -->
+<!--          <button type="button" class="btn btn-primary">Cancel</button>  -->
       </div>
     </div>
     
@@ -129,10 +133,10 @@
 	   </div>
 
 	</div>
-<!-- 	<button id="mimic">mimic</button> -->
+<!-- 	<button id="mimic">mimic</button>  -->
 <div  class="row container-fluid" id="main-div1">
 	<div class="col-lg-6" id="main-div" >
-				<div class="panel panel-primary">
+				<div class="panel panel-primary" >
 	      			<div class="panel-heading " id="panelHeading1"><center id="centerText1" class="panelHeadingBold">CONFIGURATION </center>
 	      			</div>
 	     			<div class="panel-body" id="main-div-conf" >
@@ -168,9 +172,12 @@
 	   			</div>
 	       </div>
 	</div>
+	<div  class="container-fluid resultMainPage" id="main-divResult">
+
+	</div>
 	
 	<footer>
-Copyrights &copy; COEP TECH - Virtual Lab
+Copyrights &copy; COEPTECH - Virtual Lab
 </footer>
 </body>
 
@@ -180,24 +187,20 @@ Copyrights &copy; COEP TECH - Virtual Lab
 <script type="text/javascript" src="lib/jquery.js"></script>
 <script src="https://code.highcharts.com/highcharts.js"></script>
 <script src="https://code.highcharts.com/highcharts-more.js"></script>
-<!--  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script> -->
-<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script> -->
+
 <script type="text/javascript" src="lib/raphael.js"></script>
 <script type="text/javascript" src="lib/raphael.min.js"></script>
-<!--   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
 
- 
   <script type="text/javascript" src="src/bootstrap.min.js"></script>
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
 <script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
 
-<!-- <script src="https://code.highcharts.com/highcharts.js"></script> -->
-<!-- <script type="text/javascript" src="src/mimic.js"></script> -->
+<script type="text/javascript" src="src/mimic.js"></script>
 <script type="text/javascript" src="src/refTable.js"></script>
 
 <script type="text/javascript" src="src/questionJson.js"></script>
 <script type="text/javascript" src="src/questions.js"></script>
-<!-- <script type="text/javascript" src="src/fualtFinding.js"></script> -->
+
 <script type="text/javascript" src="src/mainPage.js"></script>
 <script type="text/javascript" src="src/materialJson.js"></script>
 
@@ -206,8 +209,15 @@ Copyrights &copy; COEP TECH - Virtual Lab
 <script type="text/javascript" src="src/table.js"></script>
 <script type="text/javascript" src="src/tableAndGraph.js"></script>
 <script type="text/javascript" src="src/Procedure.js"></script>
+<script type="text/javascript" src="src/result.js"></script>
+
 <script >
 
+$("#result").click(function(){
+
+	result();
+	  
+	});
 $("#procedure").click(function(){
 
 Procedure();

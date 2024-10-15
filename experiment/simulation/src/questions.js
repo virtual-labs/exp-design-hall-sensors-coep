@@ -1,5 +1,6 @@
 	
-	
+			resultMasterJson={};
+			
 			var flag = false;
 			var myRadio = null;
 			dataQues = {};
@@ -125,8 +126,11 @@
 //					 
 						 $("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully .<br> Correct Answers Are : " + ansCount);
 						 moveNextCounter=1;
-						
-						
+						console.log("ansCount "+ansCount);
+						tempJson={};
+						tempJson.correctQuestion=ansCount;
+						resultMasterJson.question=tempJson;
+						console.log(resultMasterJson);
 		   					
 					}
 					

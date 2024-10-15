@@ -50,9 +50,9 @@ function tableCreate(masterJson)
 							 {
 								 $("#current").prop("disabled",true);
 							$("#thickness").prop("disabled",true);	
-							 $("#modelBody").html("Click on 'SHOW RESULT' button to get results based on the selected current and thickness.");
+							 $("#modelBody").html("GO TO NEXT LEVEL. ");
 							 $(".blink").prop('hidden',true);
-							 tableMainDiv +='<button type="button" class="btn btn-danger" id="graph" style="width:100%;margin-top: -6px;"  >SHOW RESULT</button>'	 
+							 tableMainDiv +='<button type="button" class="btn btn-danger" id="graph" style="width:100%;margin-top: -6px;"  >SHOW TABLE AND GRAPH</button>'	 
 						
 //							 $("#modelBody").html('<img src="images/cong.gif" class="img-fluid" > ');
 							 $("#checkConfg").prop('disabled',true);
