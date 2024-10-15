@@ -13,6 +13,8 @@ var applicationName="";
 var fluxDensity;
 var thickness=0;
 var wrongCounter=0;
+var arrCurrent=[];
+var arrThickness=[];
 //mainpage function
 
  function mainPage (){
@@ -221,7 +223,7 @@ var wrongCounter=0;
 				 materialValue=parseInt( $('#materialSelection').val());
 //				 $('#fluxDensity').prop('hidden',false);
 				 htm='<div class="col-sm-6">'
-					 +'<label class="labelstyle">Flux density ( weber/m<sup>2</sup> ) </label>'
+					 +'<label class="labelstyle">Flux density (weber/m<sup>2</sup>) </label>'
 					 +'</div>'
 					 +'<div class="col-sm-6" >'
 					 +'<select  class="form-control selectConf"   style="height:auto;" id="fluxDensity1" >'
@@ -239,8 +241,9 @@ var wrongCounter=0;
 			 }
 			 
 			 });
-	  
+	  var  totalAttempt; 
 	   $("#checkConfg").click(function(){
+		   totalAttempt=0; 
 		           current=$("#current").val();
 				   thickness=$("#thickness").val();
 				   fluxDensity=$("#fluxDensity1").val();
@@ -267,6 +270,8 @@ var wrongCounter=0;
 				   $("#checkConfg").prop('disabled',true);	
 				   $("#applicationSelection1").prop('disabled',true);
 				 
+				   
+					
 				   if(applicationSelection==1)
 					   {
 						   applicationName="CURRENT";
@@ -279,6 +284,8 @@ var wrongCounter=0;
 						   $("#current option[id="+current1+"]").css("background-color","#dacecf");
 						   
 						   $("#current option[id="+current1+"]").attr("disabled",true);
+						   resultFunction1();
+						   
 					   }
 				   else if(applicationSelection==2)
 				   {
@@ -293,6 +300,7 @@ var wrongCounter=0;
 					   
 						$("#thickness option[id="+current1+"]").attr("disabled",true);
 						$("#thickness option[id="+current1+"]").css("background-color","#dacecf");
+						resultFunction2();
 				   }
 				  
 		 
@@ -301,14 +309,35 @@ var wrongCounter=0;
 			$("body").css("padding","0px 0px 0px 0px");
 			
 					}
-			 
+					resultMasterJsonCurrent={};
+					resultMasterJsonThickness={};
+					function resultFunction1()
+					{
+						 tempJson={};
+							tempJson.applicationName="CURRENT";
+							tempJson.thickness=thickness;
+							tempJson.fluxDensity=fluxDensity;
+							tempJson.materialIdName=materialIdName;
+							resultMasterJson.currentStage=tempJson;
+							console.log(resultMasterJson);
+					}
+					function resultFunction2()
+					{
+						 tempJson={};
+							tempJson.applicationName="THICKNESS";
+							tempJson.current=current;
+							tempJson.materialIdName=materialIdName;
+							tempJson.fluxDensity=fluxDensity;
+							resultMasterJson.thicknessStage=tempJson;
+							console.log(resultMasterJson);
+					}
 	   });
 	   
 	   
 	     var id=0;
 		 var kh;
 		 var t;
-			  
+			
 		  $("#btnAnsCheck").click(function() {
 			  $("#modelMsg").html("");
 			  kh=0;
@@ -360,10 +389,11 @@ var wrongCounter=0;
 				temp12=kh*fluxDensity*current/t;
 				
 				temp123=temp12*Math.pow(10,6);
-				finalAns=temp123.toFixed(4);
-//				console.log("finalAns  "+finalAns);
+				finalAns1=temp123.toFixed(4);
+				console.log("finalAns  "+finalAns1);
+				finalAns=parseFloat(finalAns1);
 				
-//				console.log("KH   "+ kh);
+				console.log("finalAns   "+ finalAns);
 
 				if(flowAns==""){
 					$("#modelMsg").html("");
@@ -380,9 +410,9 @@ var wrongCounter=0;
 					if (id <= 3) {
 						if (flowAns == finalAns) {
 							 $("#msgName").html("MESSAGE BOX ");
-								$("#modelBody").css("color", "green");
-								
-								 $("#modelBody").html("TAKE THE ANOTHER READING FOR "+applicationName+".");
+								$("#modelBody").css("color", "#795548");
+								$("#modelBody").css("font-weight", "600");
+								 $("#modelBody").html("TAKE ANOTHER READING FOR "+applicationName+".");
 							
 //							 $("#modelBody").css("color", "#000");
 //							$("#modelMsg").html("Change the "+applicationName);
@@ -405,7 +435,7 @@ var wrongCounter=0;
 						} else if (flowAns != finalAns) {
 							
 							
-						
+							totalAttempt++;
 						 $("#msgName").html("MESSAGE BOX ");
 							 $("#modelBody").css("color", "red");
 							$("#modelBody").html("<b>Entered value is incorrect. Let us try again . </b>");
@@ -419,7 +449,7 @@ var wrongCounter=0;
 						
 							$("#modelBody").css("font-weight", "600");
 						 $("#msgName").html("FORMULA ");
-
+						 totalAttempt++;
 						 modelBody='<div class="col-sm-12 formula" > V<sub>H</sub> = K<sub>H</sub>BI/t</div>'
 							 +'<span>Where ,</span><br>' 
 						 +'<span>V<sub>H</sub> -  hall voltage generated</span><br>'
@@ -440,7 +470,7 @@ var wrongCounter=0;
 							
 							$("#modelBody").css("color", "#795548");
 							$("#modelBody").css("font-weight", "600");
-							$("#modelBody").html("TAKE THE ANOTHER READING FOR "+applicationName+".");
+							$("#modelBody").html("TAKE ANOTHER READING FOR "+applicationName+".");
 							$("#CalculateActualFlow").prop("hidden",true);
 							$("#checkConfg").prop('disabled',true);
 							if(applicationSelection==1)
@@ -457,9 +487,10 @@ var wrongCounter=0;
 							}
 							
 						} else {
+							totalAttempt++;
 							 $("#msgName").html("MESSAGE BOX ");
 							$("#modelBody").css("color", "blue");
-							 $("#modelBody").html("<b>Correct answer is " + finalAns+"</b>");
+							 $("#modelBody").html("<b>CORRECT ANSWER IS " + finalAns+"</b>");
 							
 							
 
@@ -467,7 +498,7 @@ var wrongCounter=0;
 					}
 					id++;
 					}
-				
+			
 					function addtocurrentMasterJson()
 					{
 							
@@ -481,8 +512,14 @@ var wrongCounter=0;
 						tempJson.VoltageOutput = finalAns;
 						currentArrayJson.push(tempJson);
 						currentMasterJson.demo = currentArrayJson;
-//						console.log(currentMasterJson);
-//						tableCreate(masterJson);
+						
+						
+						var tempJson={};
+						tempJson.value=current;
+						tempJson.totalAttempt=parseInt(1+totalAttempt);
+						arrCurrent.push(tempJson);
+						resultMasterJson.roundCurrent=arrCurrent;
+						console.log(resultMasterJson);
 						
 					}
 					function addtothicknessMasterJson()
@@ -498,7 +535,14 @@ var wrongCounter=0;
 						tempJson.VoltageOutput = finalAns;
 						thicknessArrayJson.push(tempJson);
 						thicknessMasterJson.demo = thicknessArrayJson;
-//						console.log(thicknessMasterJson);
+						
+						var tempJson={};
+						tempJson.value=thickness;
+						tempJson.totalAttempt=parseInt(1+totalAttempt);
+						
+						arrThickness.push(tempJson);
+						resultMasterJson.roundThickness=arrThickness;
+						console.log(resultMasterJson);
 //						tableCreate(masterJson);
 						
 					}
