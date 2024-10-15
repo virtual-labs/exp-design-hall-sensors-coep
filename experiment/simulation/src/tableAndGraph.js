@@ -1,11 +1,15 @@
 function tableAndGraph(){
 	$("#procedure").prop("hidden",true);
+	$("#result").prop("hidden",false);
 	$("#tableDesign").remove();
 	$("#referenceTable").remove();
 	$("#current").prop("disabled",true);
 	$("#thickness").prop("disabled",true);
 	Table();
 	Graph();
+		
+
+	
 }
 
 function Table(){	
@@ -68,6 +72,9 @@ currentTable+='   </tbody>'
 		+' </table>'
 
 		$("#canvas-div").html(currentTable);
+
+
+
 }
 
 function Graph(){
@@ -138,7 +145,7 @@ function Graph(){
 				min: Ymin,
 				max: Ymax,
 				title: {
-					text: 'Voltage(&micro;V)',
+					text: 'Voltage  Output(&micro;V)',
 					style: {
 					fontSize: '15px', // Font size for y-axis labels
 					color:"black"
@@ -250,7 +257,7 @@ function Graph(){
 					min: Ymin,
 					max: Ymax,
 					title: {
-						text: 'Voltage(&micro;V)',
+						text: 'Voltage  Output(&micro;V)',
 						style: {
 					fontSize: '15px', // Font size for y-axis labels
 					color:"black"
@@ -296,11 +303,6 @@ function Graph(){
 
 			});
 			
-			
-//			console.log(masterJson);
-//		
-//		console.log(masterJson);
-
 }
 
 //}
