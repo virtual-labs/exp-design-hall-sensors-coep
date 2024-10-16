@@ -1,6 +1,7 @@
 function tableAndGraph(){
 	$("#procedure").prop("hidden",true);
 	$("#result").prop("hidden",false);
+	
 	$("#tableDesign").remove();
 	$("#referenceTable").remove();
 	$("#current").prop("disabled",true);
