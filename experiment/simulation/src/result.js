@@ -75,10 +75,8 @@ function result(){
 		+'      </tr>'
 		+'      <tr>'
 		+'        <td><span class="stageLabel">Calculation </span></td>'
-		+'        <td>'
-		+'         <div class="alert alert-success attainedText">'
-	    +'         <center><strong>Attained</strong> </center>'
-	     +'       </div>'
+		+'        <td id="calcuationAtt">'
+		
 		+'       </td>'
 		+'      </tr>'
 		+'      <tr>'
@@ -646,7 +644,36 @@ function result(){
 		+'<br>'
 		+'<br>'
 		$("#main-div1,#main-div").html("");
+	var savejpg='<div class="row">'
+		      +'<div class="col-sm-9">'
+		
+	          +'</div>'
+	          +'<div class="col-sm-1">'
+	         + '<button type="button" class="btn btn-danger"  id="savejpg" style="margin-top:10px;"  >Save as .jpg</button>'
+	          +'</div>'
+	          +'<div class="col-sm-2">'
+	  		
+	          +'</div>'
+		        +'</div>'
+	$("#main-div").html(savejpg);
+	
 		$("#main-divResult").html(htm);
+		
+		$('#savejpg').on('click', function() {
+			$('#savejpg').prop("hidden",true);
+		    html2canvas(document.querySelector("#main-divResult")).then(canvas => {
+		        // Append the screenshot canvas to the body
+		        document.body.appendChild(canvas);
+		        $("canvas").css("display","none");
+		        // Optionally save the screenshot as an image
+		        var link = document.createElement('a');
+		        link.download = 'screenshot.png';
+		        link.href = canvas.toDataURL();
+		        link.click();
+		    });
+		});
+		
+		
 		console.log(resultMasterJson.question.correctQuestion);
 		CorrectAnswer=parseInt(resultMasterJson.question.correctQuestion);
 		var tempBasicKnowledge=parseInt((CorrectAnswer/5)*100);
@@ -686,6 +713,23 @@ function result(){
 		var tempCalPer=parseFloat((12/(total12)*100));
 		console.log(" tempCalPer "+tempCalPer);
 		
+		
+		if(tempCalPer>=60){
+			 var str=''
+				 +' <div class="alert alert-success attainedText">'
+			    +'  <center><strong>Attained</strong> </center>'
+			     +'  </div>'
+			     $("#calcuationAtt").html(str);
+			     
+		}
+		else
+			{
+			 var str=''
+				 +' <div class="alert alert-danger attainedText">'
+			    +'  <center><strong>Not Attained</strong> </center>'
+			     +'  </div>'
+			     $("#calcuationAtt").html(str);
+			}
 	Highcharts.setOptions({
 	    colors: Highcharts.map(Highcharts.getOptions().colors, function (color) {
 	        return {

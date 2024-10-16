@@ -95,6 +95,14 @@ var arrThickness=[];
 	   +'</div>'
 	  +'<br>'
 	  
+	  +'<div class="row">'
+	  +'<div class="col-sm-6">'
+	  +'</div>'
+	   +'<div class="col-sm-6">'
+	   +'<span id="error" style="color:red;font-weight:500;"></span>'
+	   +'</div>'
+	   +'</div>'
+	   +'<br>'
 	   +'<div class="row"  >'
 	   +'<div class="col-sm-12" id="mimicbtnquesAns">'
 	 +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" data-toggle="modal" data-target="#myModal1"  id="checkConfg" ><b>SIMULATION</b></button>'
@@ -169,7 +177,7 @@ var arrThickness=[];
 			$('#thickness').change(function(){
 				
 				if($('#thickness').val()=="-1"){
-						alert("Wrong configuration.");
+						$("#error").html("Wrong configuration.");
 						 $("#checkConfg").prop('disabled',true);	
 					}
 					else{
@@ -181,7 +189,7 @@ var arrThickness=[];
 			
 			$('#current').change(function(){
 				if($('#current').val()=="-1"){
-						alert("Wrong configuration.");
+					$("#error").html("Wrong configuration.");
 						 $("#checkConfg").prop('disabled',true);	
 					}
 					else{
@@ -194,16 +202,26 @@ var arrThickness=[];
 			applicationSelection=$('#applicationSelection1').val();
 			
 			if(applicationSelection=="1"){
+				
 					$("#current").prop('disabled',false);
 					$("#thickness").prop('disabled',true);
+					$('#applicationSelection1').prop('disabled',true);
+					$('#materialSelection').prop('disabled',false);
 			}
 			else if(applicationSelection=="2"){
 					$("#current").prop('disabled',true);
 					$("#thickness").prop('disabled',false);
+					$('#applicationSelection1').prop('disabled',true);
+					$('#materialSelection').prop('disabled',false);
 			}
+			else if(applicationSelection==0){
+				$("#error").html("Select application type");
+				   $("#materialSelection,#current,#fluxDensity1,#thickness").prop('disabled',true);
+				  
+				   
+			   }
 			
 			
-			$('#materialSelection').prop('disabled',false);
 			
 			
 		});
@@ -256,16 +274,10 @@ var arrThickness=[];
 					
 					if(current=="-1"||thickness=="-1"||fluxDensity=="-1"||materialSelection=="-1"){
 						 $("#checkConfg").prop('disabled',true);
-						//$("#modelMsg1").html("Wrong configuration.");
-						$("#modelMsg").html("");
-						$("#modelMsg").html("Wrong configuration. ");
+						$("#error").html("Wrong configuration. ");
 						
-							 alert("Wrong configuration.");
 					}
 					else{
-				   
-//				   material=$("#materialSelection").children(":selected").attr("id");
-//				   console.log("material"+material);
 				   
 				   $("#checkConfg").prop('disabled',true);	
 				   $("#applicationSelection1").prop('disabled',true);
@@ -275,11 +287,8 @@ var arrThickness=[];
 				   if(applicationSelection==1)
 					   {
 						   applicationName="CURRENT";
-						   $("#materialSelection").prop('disabled',true);
-						   $("#thickness").prop('disabled',true);
-						   $("#fluxDensity1").prop('disabled',true);
-						   $('#optionCurrent').prop('disabled',true);
-						   $('#current').prop('disabled',true);
+						   $("#materialSelection,#current,#fluxDensity1,#thickness,#optionCurrent").prop('disabled',true);
+						   
 						   current1=$("#current").children(":selected").attr("id");
 						   $("#current option[id="+current1+"]").css("background-color","#dacecf");
 						   
@@ -290,11 +299,9 @@ var arrThickness=[];
 				   else if(applicationSelection==2)
 				   {
 					   applicationName="THICKNESS";
-					   $("#materialSelection").prop('disabled',true);
-					   $("#current").prop('disabled',true);
-					   $("#fluxDensity1").prop('disabled',true);
-					   $('#optionThinkness').prop('disabled',true);
-					   $("#thickness").prop('disabled',true);
+					  $("#materialSelection,#current,#fluxDensity1,#thickness,#optionThinkness").prop('disabled',true);
+					   
+					   
 					   current1=$("#thickness").children(":selected").attr("id");
 //					   console.log("current 1 thickness"+current1);
 					   
@@ -302,9 +309,16 @@ var arrThickness=[];
 						$("#thickness option[id="+current1+"]").css("background-color","#dacecf");
 						resultFunction2();
 				   }
+				   else if(applicationSelection==0){
+					   $("#error").html("Select Application type ");
+					   $("#materialSelection,#current,#fluxDensity1,#thickness").prop('disabled',true);
+					  
+					   
+				   }
 				  
-		 
+			 $("#error").html("");
 		   mimic();
+		  
 		   $("#flowAns").val('');
 			$("body").css("padding","0px 0px 0px 0px");
 			
@@ -394,15 +408,15 @@ var arrThickness=[];
 				finalAns=parseFloat(finalAns1);
 				
 				console.log("finalAns   "+ finalAns);
-
-				if(flowAns==""){
-					$("#modelMsg").html("");
+				$("#modelMsg").html("");
+				if(flowAns==" "){
+					
 					$("#modelMsg").html("Enter numeric value. ");
 					
 				}
 				else
 					{
-					if(flowAns==""){
+					if(flowAns==" "){
 						$("#modelMsg").html("");
 						$("#modelMsg").html("Enter numeric value. ");
 						
