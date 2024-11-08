@@ -1,5 +1,6 @@
 function tableAndGraph(){
-	$("#procedure").prop("hidden",true);
+	$("#main-div1").css("margin-top","-42px");
+	$("#procedure,#simDemo").prop("hidden",true);
 	$("#result").prop("hidden",false);
 	
 	$("#tableDesign").remove();
