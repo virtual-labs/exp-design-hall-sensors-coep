@@ -1,4 +1,6 @@
 function result(){
+	$("#saveAsJpg").prop("hidden",false);
+	$("#result").prop("hidden",true);
 	htm=''
 		+'<div class="row">'
 		+'<div class="col-sm-2">'
@@ -810,5 +812,18 @@ function result(){
          console.log("date "+date);
          console.log("time "+time);
      });
+	 $('#saveAsJpg').on('click', function() {
+			$('#saveAsJpg').prop("hidden",true);
+		    html2canvas(document.querySelector("#main-divResult")).then(canvas => {
+		        // Append the screenshot canvas to the body
+		        document.body.appendChild(canvas);
+		        $("canvas").css("display","none");
+		        // Optionally save the screenshot as an image
+		        var link = document.createElement('a');
+		        link.download = 'screenshot.png';
+		        link.href = canvas.toDataURL();
+		        link.click();
+		    });
+		});
  
 }

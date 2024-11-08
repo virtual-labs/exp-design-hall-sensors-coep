@@ -1,4 +1,4 @@
-	
+			$("#main-div1").css("margin-top","-22px");
 			resultMasterJson={};
 			
 			var flag = false;
@@ -135,6 +135,7 @@
 					}
 					
 					$('#next').on('click', function() {	
+						$("#main-div1").css("margin-top","-42px");
 						if(moveNextCounter==1)
 							{
 							mainPage();
