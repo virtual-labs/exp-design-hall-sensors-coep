@@ -72,7 +72,7 @@
 				
 		
 
-			$("#main-div-conf").html(questions);
+			$("#canvas-div").html(questions);
 //			$("#click").on('click', function() {	
 //				mimic();
 //			});
