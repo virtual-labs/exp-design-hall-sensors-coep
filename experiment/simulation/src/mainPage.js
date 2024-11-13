@@ -19,7 +19,9 @@ var arrThickness=[];
 
  function mainPage (){
 
-	
+	$("#canvas-div").html('');
+	$("#canvas-div").html('<img src="images/halleffect.jpg" class="img-fluid" >');
+	$("#centerText1").html("CONFIGURATION");
 	 $('#applicationSelection').prop('hidden',false);
 		$('#applicationType').prop('hidden',false);
 	$("body").css("padding","0px 0px 0px 0px");

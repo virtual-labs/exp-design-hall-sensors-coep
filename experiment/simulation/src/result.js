@@ -20,7 +20,7 @@ function result(){
 		+'</div>'
 		+'<div class="col-sm-6 " style="">'
 		+'<span>'
-		+'<h6><center style="font-weight: bold;border-style: dashed;" class="blink">Simulation Completed .</center></h6>'
+		+'<h6><center style="font-weight: bold;border-style: dashed;" class="blink">Simulation completed successfully</center></h6>'
 //		+'<br><h6><center style="font-weight: bold;">Simulation completed .</center></h6>'
 		+'</span>'
 		+'</div>'
