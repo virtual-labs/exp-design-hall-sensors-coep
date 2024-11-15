@@ -26,7 +26,6 @@ var arrThickness=[];
 		$('#applicationType').prop('hidden',false);
 	$("body").css("padding","0px 0px 0px 0px");
 	
-	
 	var htm=''
 	+'<div class="row">'
 	   +'<div class="col-sm-6" id="labelMaterial" >'
@@ -80,7 +79,7 @@ var arrThickness=[];
 	
 	   +'<div class="row">'
 	   +'<div class="col-sm-6">'
-	   +'<label for="meter">Thickness of the Hall element(mm) </label>'
+	   +'<label for="meter">Thickness of the hall element(mm) </label>'
 	   +'</div>'
 	   
 	   +'<div class="col-sm-6">'
@@ -234,7 +233,7 @@ var arrThickness=[];
 			 
 			 if(materialValue=="-1")
 				 {
-				 $("#modelMsg").html("<b class='boldTextRed'>Select Material Type</b> ");
+				 $("#modelMsg").html("<b class='boldTextRed'>Select material type</b> ");
 				 }
 			 else{
 				 $('#thickness').prop('disabled',false);
@@ -250,7 +249,7 @@ var arrThickness=[];
 					
 					  for(i=0;i<masterJsonArr[materialValue].range.length;i++){
 						  if(i==0){
-							  htm+='<option value="-1">Select Flux Density </option>'
+							  htm+='<option value="-1">Select flux density </option>'
 						  }
 						  htm+='<option value="'+masterJsonArr[materialValue].range[i]+'" >'+masterJsonArr[materialValue].range[i]+'  </option>'
 					  } 
@@ -269,10 +268,10 @@ var arrThickness=[];
 				   fluxDensity=$("#fluxDensity1").val();
 				   materialIdName=$("#materialSelection").children(":selected").attr("id");
 				   materialSelection= $("#materialSelection").val();
-				    console.log("current "+current);
-					console.log("thickness "+thickness);
-					console.log("fluxDensity "+fluxDensity);
-					console.log("materialSelection "+materialSelection);
+				   // console.log("current "+current);
+					//console.log("thickness "+thickness);
+					//console.log("fluxDensity "+fluxDensity);
+					//console.log("materialSelection "+materialSelection);
 					
 					if(current=="-1"||thickness=="-1"||fluxDensity=="-1"||materialSelection=="-1"){
 						 $("#checkConfg").prop('disabled',true);
@@ -312,7 +311,7 @@ var arrThickness=[];
 						resultFunction2();
 				   }
 				   else if(applicationSelection==0){
-					   $("#error").html("Select Application type ");
+					   $("#error").html("Select application type ");
 					   $("#materialSelection,#current,#fluxDensity1,#thickness").prop('disabled',true);
 					  
 					   
@@ -335,7 +334,7 @@ var arrThickness=[];
 							tempJson.fluxDensity=fluxDensity;
 							tempJson.materialIdName=materialIdName;
 							resultMasterJson.currentStage=tempJson;
-							console.log(resultMasterJson);
+						//	console.log(resultMasterJson);
 					}
 					function resultFunction2()
 					{
@@ -345,7 +344,7 @@ var arrThickness=[];
 							tempJson.materialIdName=materialIdName;
 							tempJson.fluxDensity=fluxDensity;
 							resultMasterJson.thicknessStage=tempJson;
-							console.log(resultMasterJson);
+						//	console.log(resultMasterJson);
 					}
 	   });
 	   
@@ -406,21 +405,21 @@ var arrThickness=[];
 				
 				temp123=temp12*Math.pow(10,6);
 				finalAns1=temp123.toFixed(4);
-				console.log("finalAns  "+finalAns1);
+			//	console.log("finalAns  "+finalAns1);
 				finalAns=parseFloat(finalAns1);
 				
-				console.log("finalAns   "+ finalAns);
+			//	console.log("finalAns   "+ finalAns);
 				$("#modelMsg").html("");
-				if(flowAns==" "){
-					
-					$("#modelMsg").html("Enter numeric value. ");
+				if(flowAns=="" || isAlphabetical(flowAns)){
+					$("#modelBody").css("color", "red");
+					$("#modelMsg").html("Enter numeric value.");
 					
 				}
 				else
 					{
-					if(flowAns==" "){
-						$("#modelMsg").html("");
-						$("#modelMsg").html("Enter numeric value. ");
+					if(flowAns=="" || isAlphabetical(flowAns)){
+						$("#modelBody").css("color", "red");
+						$("#modelMsg").html("Enter numeric value.");
 						
 					}
 					if (id <= 3) {
@@ -454,17 +453,14 @@ var arrThickness=[];
 							totalAttempt++;
 						 $("#msgName").html("MESSAGE BOX ");
 							 $("#modelBody").css("color", "red");
-							$("#modelBody").html("<b>Entered value is incorrect. Let us try again . </b>");
+							$("#modelBody").html("<b>Entered value is incorrect, Let us try again. </b>");
 							
 						
 						}
 
 
 					} else if (id == 4) {
-						 $("#modelBody").css("color", "#000");
-						
-							$("#modelBody").css("font-weight", "600");
-						 $("#msgName").html("FORMULA ");
+						  $("#msgName").html("FORMULA ");
 						 totalAttempt++;
 						 modelBody='<div class="col-sm-12 formula" > V<sub>H</sub> = K<sub>H</sub>BI/t</div>'
 							 +'<span>Where ,</span><br>' 
@@ -475,6 +471,8 @@ var arrThickness=[];
 						 +'<span>K<sub>H</sub>-  hall coefficient ( V-m/A-Wbm<sup>-2</sup>)</span><br>'
 						 
 						 $("#modelBody").html(modelBody);
+						$("#modelBody").css("color", "black");
+						$("#modelBody").css("font-weight", "600");
 						
 //						$("#modelMsg").html(" ");
 						
@@ -506,7 +504,7 @@ var arrThickness=[];
 							totalAttempt++;
 							 $("#msgName").html("MESSAGE BOX ");
 							$("#modelBody").css("color", "blue");
-							 $("#modelBody").html("<b>CORRECT ANSWER IS " + finalAns+"</b>");
+							 $("#modelBody").html("<b>Correct answer is " + finalAns+"</b>");
 							
 							
 
@@ -535,7 +533,7 @@ var arrThickness=[];
 						tempJson.totalAttempt=parseInt(1+totalAttempt);
 						arrCurrent.push(tempJson);
 						resultMasterJson.roundCurrent=arrCurrent;
-						console.log(resultMasterJson);
+					//	console.log(resultMasterJson);
 						
 					}
 					function addtothicknessMasterJson()
@@ -558,7 +556,7 @@ var arrThickness=[];
 						
 						arrThickness.push(tempJson);
 						resultMasterJson.roundThickness=arrThickness;
-						console.log(resultMasterJson);
+						//console.log(resultMasterJson);
 //						tableCreate(masterJson);
 						
 					}
