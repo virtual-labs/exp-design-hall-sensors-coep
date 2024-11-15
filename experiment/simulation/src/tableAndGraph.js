@@ -1,7 +1,7 @@
 function tableAndGraph(){
 	$("#main-div1").css("margin-top","-42px");
 	$("#procedure,#simDemo").prop("hidden",true);
-	$("#result").prop("hidden",false);
+	
 	
 	$("#tableDesign").remove();
 	$("#referenceTable").remove();
@@ -103,6 +103,7 @@ function Graph(){
 	}
 
 		Highcharts.chart('Graph1', {
+			credits: { enabled: false},
 			title: {
 				text: ' Current v/s Voltage Output  '
 			},
@@ -214,6 +215,7 @@ function Graph(){
 		}
 
 			Highcharts.chart('Graph2', {
+				credits: { enabled: false},
 				title: {
 					text: ' Thickness v/s Voltage Output  '
 				},
@@ -304,6 +306,16 @@ function Graph(){
 					}]
 
 			});
+			htm='<div class="row">'
+		  htm+='<div class="col-sm-12" id="buttonDiv">'
+	   +'<button type="button" style="padding: 10px; "  class="btn btn-danger btnStyle" id="result" ><b> RESULT </b></button>' 
+	    +'</div>'
+		  +'</div>'
+		 $("#Graph2").append(htm);
+		 $("#result").on("click", function(){
+	//console.log("dfgfg");
+	result();
+});
 			
 }
 

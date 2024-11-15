@@ -124,13 +124,13 @@
 						
 //						alert("Test Submitted Successfully . Correct Answers Are : " + ansCount);
 //					 
-						 $("#modelMsg").html("<b class='boldTextGreen'>Test Submitted Successfully .<br> Correct Answers Are : " + ansCount);
+						 $("#modelMsg").html("<b class='boldTextGreen'>Test submitted successfully .<br> Correct answers are : " + ansCount);
 						 moveNextCounter=1;
-						console.log("ansCount "+ansCount);
+					//	console.log("ansCount "+ansCount);
 						tempJson={};
 						tempJson.correctQuestion=ansCount;
 						resultMasterJson.question=tempJson;
-						console.log(resultMasterJson);
+					//	console.log(resultMasterJson);
 		   					
 					}
 					

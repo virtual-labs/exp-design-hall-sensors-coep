@@ -5,11 +5,11 @@
 
 #### Use "Reference table" button to get hall coefficients for different materials.
 
-##### Application type : Measurement of Current
+##### Application type : Measurement of current
 
 - Step 1 : Configure hall sensor parameters: material, flux density, current and thickness. 
 
-- Step 2 : Click on "simulation" button.
+- Step 2 : Click on "Simulation" button.
 
 - Step 3 : Click on green button to start mimic.
 
@@ -21,10 +21,10 @@
 
 - Step 7 : Observe above sensor output for different material.
 
-##### Application type : Measurement of Thickness
+##### Application type : Measurement of thickness
 
 - Step 8 : Select another application type for thickness.
 
-- Step 9 : Repeat Step 1 to Step 5 for change in thickness.
+- Step 9 : Repeat Steps 1 to Step 5 for change in thickness.
 
-- Step 10 : To get observation table and graph click on "Show Result" button.
+- Step 10 : To get observation table and graph, click on "Result" button.

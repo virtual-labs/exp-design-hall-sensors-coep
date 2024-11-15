@@ -20,8 +20,8 @@ function tableCreate(masterJson)
 					+ '  <tr>'
 					+ '  <th scope="col"><center>Current(ampere)</center></th>'
 					+ '   <th scope="col"><center >Thickness(mm) </center></th>'
-					+ '  <th scope="col"><center>fluxDensity(weber/m<sup>2</sup>)</center></th>'
-					+ '  <th scope="col"><center>Voltage Output(&micro;V)</center></th>'
+					+ '  <th scope="col"><center>flux density(weber/m<sup>2</sup>)</center></th>'
+					+ '  <th scope="col"><center>Voltage output(&micro;V)</center></th>'
 					
 					+ '   </tr>'
 					+ '  </thead>'
@@ -42,8 +42,8 @@ function tableCreate(masterJson)
 						 {
 //						 console.log('appCount'+appCount);
 						 if(appCount==0){
-							 $("#modelBody").html("SELECT ANOTHER APPLICATION  ");
-							 tableMainDiv +='<button type="button" class="btn btn-danger" id="continue" style="width:100%;margin-top: -6px;"  >SELECT ANOTHER APPLICATION   </button>'	
+							 $("#modelBody").html("SELECT ANOTHER APPLICATION");
+							 tableMainDiv +='<button type="button" class="btn btn-danger" id="continue" style="width:100%;margin-top: -6px;"  >SELECT ANOTHER APPLICATION</button>'	
 													 
 						 }
 						 else
