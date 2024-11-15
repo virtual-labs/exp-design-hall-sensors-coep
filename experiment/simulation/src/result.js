@@ -1,5 +1,5 @@
 function result(){
-	$("#saveAsJpg").prop("hidden",false);
+	$("#saveAsJpg,#main-divResult").prop("hidden",false);
 	$("#result").prop("hidden",true);
 	htm=''
 		+'<div class="row">'
@@ -20,7 +20,7 @@ function result(){
 		+'</div>'
 		+'<div class="col-sm-6 " style="">'
 		+'<span>'
-		+'<h6><center style="font-weight: bold;border-style: dashed;" class="blink">Simulation completed successfully</center></h6>'
+		+'<h6><center style="font-weight: bold;border-style: dashed;" class="blink">Experiment completed successfully</center></h6>'
 //		+'<br><h6><center style="font-weight: bold;">Simulation completed .</center></h6>'
 		+'</span>'
 		+'</div>'
@@ -676,10 +676,10 @@ function result(){
 		});
 		
 		
-		console.log(resultMasterJson.question.correctQuestion);
+		//console.log(resultMasterJson.question.correctQuestion);
 		CorrectAnswer=parseInt(resultMasterJson.question.correctQuestion);
 		var tempBasicKnowledge=parseInt((CorrectAnswer/5)*100);
-		console.log("temp "+tempBasicKnowledge);
+		//console.log("temp "+tempBasicKnowledge);
 		
 		
 		
@@ -708,12 +708,12 @@ function result(){
 			TotalCountCurrent+=parseInt(resultMasterJson.roundCurrent[i].totalAttempt);
 		}
 		var total12=parseInt(TotalCountCurrent+TotalCountThickness);
-		console.log(" TotalCountThickness "+TotalCountThickness);
-		console.log(" TotalCountCurrent "+TotalCountCurrent);
+	//	console.log(" TotalCountThickness "+TotalCountThickness);
+	//	console.log(" TotalCountCurrent "+TotalCountCurrent);
 		
-		console.log(" Total "+total12);
+	//	console.log(" Total "+total12);
 		var tempCalPer=parseFloat((12/(total12)*100));
-		console.log(" tempCalPer "+tempCalPer);
+	//	console.log(" tempCalPer "+tempCalPer);
 		
 		
 		if(tempCalPer>=60){
@@ -750,6 +750,7 @@ function result(){
 
 	// Build the chart
 	Highcharts.chart('graphDiv', {
+		credits: { enabled: false},
 	    chart: {
 	        plotBackgroundColor: null,
 	        plotBorderWidth: null,
@@ -757,7 +758,7 @@ function result(){
 	        type: 'pie'
 	    },
 	    title: {
-	        text: 'Pie Chart',
+	        text: ' ',
 	        align: 'left'
 	    },
 	    tooltip: {
@@ -809,8 +810,8 @@ function result(){
          // Display the formatted date and time in the respective elements
          $("#currentDate").text(formattedDate);
          $("#currentTime").text(time);
-         console.log("date "+date);
-         console.log("time "+time);
+     //    console.log("date "+date);
+     //    console.log("time "+time);
      });
 	 $('#saveAsJpg').on('click', function() {
 			$('#saveAsJpg').prop("hidden",true);
@@ -820,7 +821,7 @@ function result(){
 		        $("canvas").css("display","none");
 		        // Optionally save the screenshot as an image
 		        var link = document.createElement('a');
-		        link.download = 'screenshot.png';
+		        link.download = 'Hallsensor_report.png';
 		        link.href = canvas.toDataURL();
 		        link.click();
 		    });

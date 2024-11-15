@@ -2,19 +2,19 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1) How does increasing the thickness of a Hall sensor affect its output voltage ?",
+      "question": " How does increasing the thickness of a hall sensor affect its output voltage?",
       "answers": {
          "a": "Increases output voltage",
         "b": "Decreases output voltage",
-        "c": " Remains constant",
-        "d": " Generates a sound signal"
+        "c": "Remains constant",
+        "d": "Generates a sound signal"
       },
       
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "2) In current sensing applications, what does the Hall sensor measure to determine the current flowing through a conductor ?",
+      "question": " In current sensing applications, what does the hall sensor measure to determine the current flowing through a conductor?",
       "answers": {
         "a": "Voltage drop across the conductor",
         "b": "Magnetic field produced by the current",
@@ -26,7 +26,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "3) What is the primary effect of increasing the current through a Hall sensor on its output voltage?",
+      "question": " What is the primary effect of increasing the current through a hall sensor on its output voltage?",
       "answers": {
         "a": "The output voltage decreases",
         "b": "The output voltage increases proportionally",
@@ -38,7 +38,7 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "4) How does the thickness of the Hall sensor influence its sensitivity to magnetic fields?",
+      "question": " How does the thickness of the hall sensor influence its sensitivity to magnetic fields?",
       "answers": {
         "a": "Thicker sensors have higher sensitivity",
         "b": " Thicker sensors have lower sensitivity",
@@ -51,7 +51,7 @@
     },
 	
 	{
-      "question": "5) In a Hall effect sensor, if the thickness of the sensor decreases, what happens to the output voltage for the same applied current and magnetic field?",
+      "question": " In a hall effect sensor, if the thickness of the sensor decreases, what happens to the output voltage for the same applied current and magnetic field?",
       "answers": {
         "a": "Output voltage increases",
         "b": "Output voltage decreases",

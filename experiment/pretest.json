@@ -2,11 +2,11 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "1) What is a Hall sensor primarily used for ?",
+      "question": " What is a hall sensor primarily used for ?",
       "answers": {
          "a": "Detecting temperature",
         "b": "Measuring magnetic fields",
-        "c": " Measuring light intensity",
+        "c": "Measuring light intensity",
         "d": "Detecting pressure"
       },
       
@@ -14,7 +14,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "2) What material is commonly used in the construction of Hall sensors?",
+      "question": " What material is commonly used in the construction of hall sensors?",
       "answers": {
         "a": "Silicon",
         "b": "Copper",
@@ -26,7 +26,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "3) Where is the Hall sensor most commonly used in automobiles?",
+      "question": " Where is the hall sensor most commonly used in automobiles?",
       "answers": {
         "a": "Detecting brake fluid levels",
         "b": "Monitoring engine temperature",
@@ -38,10 +38,10 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "4) What is the main advantage of using a Hall sensor in speed detection applications?",
+      "question": " What is the main advantage of using a hall sensor in speed detection applications?",
       "answers": {
         "a": "High cost",
-        "b": " Contactless measurement",
+        "b": "Contactless measurement",
         "c": "Low durability",
         "d": "Inaccuracy in harsh environments"
 		
@@ -51,9 +51,9 @@
       "difficulty": "beginner"
     },
 	{
-      "question": "5) Which of the following is a common application of Hall sensors?",
+      "question": " Which of the following is a common application of hall sensors?",
       "answers": {
-        "a": " Temperature sensing in electronic devices",
+        "a": "Temperature sensing in electronic devices",
         "b": "Position sensing in electric motors",
         "c": "Measuring gas concentration",
         "d": "Monitoring light levels"

@@ -94,8 +94,7 @@
  <b>Reference Table</b>
 </button>	
       	 <button type="button" id="simDemo" class="btn btn-danger btn1" data-toggle="modal" data-target="#readProcedureModal1"><b>Simulation Demo</b> </button>
-		 <button type="button" class="btn btn-danger btn1"  id="result"   hidden><b>Result</b></button>
-		  <button type="button" class="btn btn-danger btn1"  id="saveAsJpg" hidden  ><b>Download Result</b></button>
+		   <button type="button" class="btn btn-danger btn1"  id="saveAsJpg" hidden  ><b>Download Result</b></button>
 		 <button type="button" class="btn btn-danger button1 btn1"  id="procedure" data-toggle="modal" data-target="#exampleModalCenter1"  >
  <b>Procedure</b>
 </button>
@@ -242,12 +241,12 @@
 	   			</div>
 	       </div>
 	</div>
-	<div  class="container-fluid resultMainPage" id="main-divResult">
+	<div  class="container-fluid resultMainPage" id="main-divResult" hidden>
 
 	</div>
 	
 	<footer>
-Copyrights &copy; COEPTECH - Virtual Lab
+Copyrights &copy; COEPTECH - Virtual Labs
 </footer>
 </body>
 
@@ -281,14 +280,13 @@ Copyrights &copy; COEPTECH - Virtual Lab
 <script type="text/javascript" src="src/tableAndGraph.js"></script>
 <script type="text/javascript" src="src/Procedure.js"></script>
 <script type="text/javascript" src="src/result.js"></script>
-
+<script>
+function isAlphabetical(input) {
+    return /^[A-Za-z]+$/.test(input);
+}
+</script>
 <script >
 
-$("#result").click(function(){
-
-	result();
-	  
-	});
 $("#procedure").click(function(){
 $("body").css("padding","0px");
 Procedure();

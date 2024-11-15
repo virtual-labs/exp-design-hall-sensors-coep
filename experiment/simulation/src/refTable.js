@@ -13,7 +13,7 @@ function referenceTable()
 		+'    <th>Material</th>'
 		+'     <th>Flux density <br>Wb /m<sup>2</sup></th>'
 		+'      <th> Temperature &deg;C</th>'
-		+'      <th> K<sub>H</sub> (V - M) /A.Wb - m<sup>-2</sup></th>'
+		+'      <th> K<sub>H</sub> (V - M) /A-Wbm<sup>-2</sup></th>'
 		+' </tr>'
 		+' </thead>'
 		+'<tbody>'
