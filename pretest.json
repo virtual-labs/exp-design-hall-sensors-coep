@@ -1,0 +1,67 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " What is a hall sensor primarily used for ?",
+      "answers": {
+         "a": "Detecting temperature",
+        "b": "Measuring magnetic fields",
+        "c": "Measuring light intensity",
+        "d": "Detecting pressure"
+      },
+      
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " What material is commonly used in the construction of hall sensors?",
+      "answers": {
+        "a": "Silicon",
+        "b": "Copper",
+        "c": "Iron",
+        "d": "Aluminum"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " Where is the hall sensor most commonly used in automobiles?",
+      "answers": {
+        "a": "Detecting brake fluid levels",
+        "b": "Monitoring engine temperature",
+        "c": "Detecting wheel speed in ABS systems",
+        "d": "Measuring fuel levels"
+      },
+     
+      "correctAnswer": "c",
+      "difficulty": "beginner"
+    },
+	{
+      "question": " What is the main advantage of using a hall sensor in speed detection applications?",
+      "answers": {
+        "a": "High cost",
+        "b": "Contactless measurement",
+        "c": "Low durability",
+        "d": "Inaccuracy in harsh environments"
+		
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": " Which of the following is a common application of hall sensors?",
+      "answers": {
+        "a": "Temperature sensing in electronic devices",
+        "b": "Position sensing in electric motors",
+        "c": "Measuring gas concentration",
+        "d": "Monitoring light levels"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    }
+  
+  ]
+}

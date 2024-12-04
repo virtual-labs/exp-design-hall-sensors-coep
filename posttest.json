@@ -1,0 +1,73 @@
+{
+  "version": 2.0,
+  "questions": [
+    {
+      "question": " How does increasing the thickness of a hall sensor affect its output voltage?",
+      "answers": {
+         "a": "Increases output voltage",
+        "b": "Decreases output voltage",
+        "c": "Remains constant",
+        "d": "Generates a sound signal"
+      },
+      
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " In current sensing applications, what does the hall sensor measure to determine the current flowing through a conductor?",
+      "answers": {
+        "a": "Voltage drop across the conductor",
+        "b": "Magnetic field produced by the current",
+        "c": "Resistance of the conductor",
+        "d": "Temperature of the conductor"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": " What is the primary effect of increasing the current through a hall sensor on its output voltage?",
+      "answers": {
+        "a": "The output voltage decreases",
+        "b": "The output voltage increases proportionally",
+        "c": "The output voltage remains constant",
+        "d": "The output voltage oscillates"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	{
+      "question": " How does the thickness of the hall sensor influence its sensitivity to magnetic fields?",
+      "answers": {
+        "a": "Thicker sensors have higher sensitivity",
+        "b": " Thicker sensors have lower sensitivity",
+        "c": " Thickness has no effect on sensitivity",
+        "d": "Sensitivity only depends on material, not thickness"
+      },
+     
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+	
+	{
+      "question": " In a hall effect sensor, if the thickness of the sensor decreases, what happens to the output voltage for the same applied current and magnetic field?",
+      "answers": {
+        "a": "Output voltage increases",
+        "b": "Output voltage decreases",
+        "c": "Output voltage stays the same",
+        "d": "Output voltage fluctuates"
+      },
+     
+      "correctAnswer": "a",
+      "difficulty": "beginner"
+    }
+  
+  
+  
+  
+  
+  
+  
+  ]
+}
