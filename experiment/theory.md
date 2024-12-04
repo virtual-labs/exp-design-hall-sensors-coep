@@ -12,7 +12,6 @@ A number of transducers can be designed using a hall element. This hall effect i
 
 
 The nominal values of hall coefficients for different materials are given in Table hall coefficients.
-
 <br>
 ![*Turbine_constr2*](images/table.png)
 
